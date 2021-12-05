@@ -14,6 +14,7 @@ let srcPath = Path.getFullName "src"
 let clientSrcPath = srcPath </> "PodVocasem.Client"
 let serverSrcPath = srcPath </> "PodVocasem.Server"
 let appPublishPath = publishPath </> "app"
+let appFePublishPath = publishPath </> "app-fe"
 
 // Targets
 let clean proj = [ proj </> "bin"; proj </> "obj" ] |> Shell.cleanDirs
@@ -27,7 +28,7 @@ Target.create "InstallClient" (fun _ ->
 )
 
 Target.create "Publish" (fun _ ->
-    [ appPublishPath ] |> Shell.cleanDirs
+    [ appPublishPath; appFePublishPath ] |> Shell.cleanDirs
     let publishArgs = sprintf "publish -c Release -o \"%s\"" appPublishPath
     Tools.dotnet publishArgs serverSrcPath
     [ appPublishPath </> "local.settings.json" ] |> File.deleteAll

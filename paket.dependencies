@@ -6,8 +6,11 @@ storage: none
 
 nuget Fable.Remoting.AzureFunctions.Worker
 nuget Microsoft.Azure.Functions.Worker.Extensions.Http
+nuget Microsoft.Azure.Functions.Worker.Extensions.Timer
 nuget Microsoft.Azure.Functions.Worker.Sdk
 nuget Microsoft.Azure.Functions.Worker
+nuget Tables.FSharp
+nuget SpotifyAPI.Web
 
 nuget Fable.Core
 nuget Fable.React

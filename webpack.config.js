@@ -140,29 +140,30 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
-                enforce: "pre",
-                use: ['source-map-loader'],
-            },
-            {
                 test: /\.(sass|scss|css)$/,
                 use: [
                     isProduction
                         ? MiniCssExtractPlugin.loader
                         : 'style-loader',
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            esModule: false
+                        }
+                    },
+                    'resolve-url-loader',
                     'postcss-loader'
                 ],
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                    },
-                ],
-            }
-
+                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?.*)?$/,
+                use: ['file-loader']
+            },
+            {
+                test: /\.js$/,
+                enforce: "pre",
+                use: ['source-map-loader'],
+            },
         ]
     }
 };
