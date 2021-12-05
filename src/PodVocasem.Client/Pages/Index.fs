@@ -76,6 +76,10 @@ let podcastBtn link (svg:string) (name:string) =
         ]
     ]
 
+open Fable.Core.JsInterop
+
+let mcsPath = importDefault "../assets/img/mcs.jpg"
+
 [<ReactComponent>]
 let IndexView () =
     let state, dispatch = React.useElmish(init, update, [| |])
@@ -94,6 +98,63 @@ let IndexView () =
                     podcastBtn "https://open.spotify.com/show/280aceAx85AKZslVytXsrB?si=50b87e50890746b7" "spotify" "Spotify"
                     podcastBtn "https://podcasts.apple.com/us/podcast/podvocasem/id1590431276" "apple-podcast" "Apple Podcasts"
                     podcastBtn "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkLnBvZHZvY2FzZW0uY3ovcnNz" "google-podcast" "Google Podcasts"
+                ]
+            ]
+        ]
+
+        Html.footer [
+            Html.classed Html.section "bg-gray-100" [
+                Html.divClassed "max-w-screen-xl px-4 py-12 mx-auto sm:px-6 md:flex md:items-center lg:px-8" [
+                    Html.img [
+                        prop.className "mb-2 md:mr-4"
+                        prop.src mcsPath
+                    ]
+                    Html.p [
+                        Html.text "Roman \"Džoukr\" Provazník a Petr \"Poli\" Polák v novém IT podcastu, který rozhodně neplave po povrchu. Zajímaví hosté a neotřelá témata do hloubky v hodinovém pořadu vysílaném přímo "
+                        Html.a [ prop.className "text-blue-800 hover:underline"; prop.href "https://twitter.com/podvocasem"; prop.text "#PodVocasem" ]
+                        Html.text "!"
+                    ]
+                ]
+            ]
+            Html.divClassed "bg-gray-900" [
+                Html.divClassed "max-w-screen-xl px-4 py-12 mx-auto sm:px-6 md:flex md:items-center md:justify-between lg:px-8" [
+                    Html.divClassed "flex justify-center items-center md:order-2 text-gray-100" [
+                        Html.a [
+                            prop.href "https://open.spotify.com/show/280aceAx85AKZslVytXsrB?si=50b87e50890746b7"
+                            prop.className "hover:text-gray-200"
+                            prop.children [ Html.img [ prop.className "mx-2 h-8 w-8"; prop.src "/svg/spotify-bw.svg" ] ]
+                        ]
+                        Html.a [
+                            prop.href "https://podcasts.apple.com/us/podcast/podvocasem/id1590431276"
+                            prop.className "hover:text-gray-200"
+                            prop.children [ Html.img [ prop.className "mx-2 h-8 w-8"; prop.src "/svg/apple-podcast-bw.svg" ] ]
+                        ]
+                        Html.a [
+                            prop.href "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkLnBvZHZvY2FzZW0uY3ovcnNz"
+                            prop.className "hover:text-gray-200"
+                            prop.children [ Html.img [ prop.className "mx-2 h-8 w-8"; prop.src "/svg/google-podcast-bw.svg" ] ]
+                        ]
+                        Html.a [
+                            prop.href "https://twitter.com/podvocasem"
+                            prop.className "hover:text-gray-200"
+                            prop.children [ Html.img [ prop.className "mx-2 h-6 w-6 invert"; prop.src "/svg/twitter.svg" ] ]
+                        ]
+                    ]
+                    Html.divClassed "mt-8 md:mt-0 md:order-1" [
+                        Html.classed Html.p "text-center md:flex md:items-center text-base leading-6 text-gray-100" [
+                            Html.text "Supported by "
+                            Html.a [
+                                prop.className "mx-auto mt-2 md:mt-0 md:ml-2"
+                                prop.href "https://www.cngroup.dk"
+                                prop.children [
+                                    Html.img [
+                                        prop.src "/svg/cn-logo.svg"
+                                        prop.className "mx-auto mt-2 md:mt-0 md:ml-2 h-10"
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
                 ]
             ]
         ]
