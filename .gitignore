@@ -16,4 +16,4 @@ release.sh
 *.orig
 *.DotSettings.user
 appsettings.Development.json
-/src/PodVocasem.Server/local.settings.json
+local.settings.json
