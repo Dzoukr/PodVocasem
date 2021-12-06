@@ -3,7 +3,6 @@
 module Response =
     type Episode = {
         Season : int
-        Episode : int
         SpotifyHash : string
     }
 

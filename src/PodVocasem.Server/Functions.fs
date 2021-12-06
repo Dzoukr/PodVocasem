@@ -1,62 +1,88 @@
 namespace PodVocasem.Server
 
+open System
+open Azure.Data.Tables
 open Fable.Remoting.Server
 open Fable.Remoting.AzureFunctions.Worker
 open Microsoft.Azure.Functions.Worker
 open Microsoft.Azure.Functions.Worker.Http
-open Microsoft.Extensions.Configuration
-open Microsoft.Extensions.Hosting
 open Microsoft.Extensions.Logging
+open Newtonsoft.Json
 open PodVocasem.Shared.API
 open PodVocasem.Shared.API.Response
-open Azure.Data.Tables
 open Azure.Data.Tables.FSharp
 open SpotifyAPI.Web
 
 module Service =
-    let private asInt (s:string) =
-        let v = s.[1..(s.Length - 1)]
-        v |> int
 
-    let getEpisodes (client:TableClient) () =
+    type EpisodeRow = {
+        Episode : SimpleEpisode
+        Published : DateTimeOffset
+    }
+
+    module EpisodeRow =
+        let fromSimpleEpisode (e:SimpleEpisode) = { Episode = e; Published = e.ReleaseDate |> DateTimeOffset.Parse }
+
+        let toEntity (e:EpisodeRow) =
+            let entity = TableEntity()
+            entity.PartitionKey <- "PodVocasem"
+            entity.RowKey <- e.Episode.Id
+            entity.["Episode"] <- e.Episode |> JsonConvert.SerializeObject
+            entity.["Published"] <- e.Published
+            entity
+
+        let fromEntity (e:TableEntity) =
+            {
+                Episode = e.GetString "Episode" |> JsonConvert.DeserializeObject<SimpleEpisode>
+                Published = (e.GetDateTimeOffset "Published").Value
+            }
+
+    let private toEpisode (e:EpisodeRow) : Episode =
+        let nums = e.Episode.Name.Split("-").[0]
+        let seas = (nums.[1] + nums.[2]) |> int
+        {
+            Season = seas
+            SpotifyHash = e.Episode.Id
+        }
+
+    let private getEpisodes (client:TableClient) () =
         task {
             let data =
                 tableQuery {
-                    maxPerPage 5
+                    filter (pk "PodVocasem")
                 }
-                |> client.Query<TableEntity> |> Seq.toList
+                |> client.Query<TableEntity>
+                |> Seq.toList
+                |> List.map EpisodeRow.fromEntity
+                |> List.sortByDescending (fun x -> x.Published)
+
             return
-                data |> List.map (fun x -> { Season = asInt x.PartitionKey; Episode = asInt x.RowKey; SpotifyHash = x.GetString("SpotifyHash") })
+                data
+                |> List.map toEpisode
         }
 
-    let upsertEpisode (client:TableClient) (name:string,url:string) =
-        task {
-            let parts = name.Split("-")
-            let nums = parts.[0].Trim()
-            let episodeName = parts.[1].Trim()
-            let hash = url.Replace("spotify:episode:","")
+    let get tableClient = {
+        GetEpisodes = getEpisodes tableClient >> Async.AwaitTask
+    }
 
+    let upsertEpisode (client:TableClient) (e:SimpleEpisode) =
+        task {
+            let entity = e |> EpisodeRow.fromSimpleEpisode |> EpisodeRow.toEntity
+            let! _ = client.UpsertEntityAsync(entity, TableUpdateMode.Merge)
             return ()
         }
 
 type Functions(log:ILogger<Functions>, tableClient:TableClient, spotifyClient:SpotifyClient) =
 
-    let service = {
-        GetEpisodes = Service.getEpisodes tableClient >> Async.AwaitTask
-    }
-
     [<Function("CheckEpisodes")>]
-    member _.CheckEpisodes([<TimerTrigger("0 30 5 * * *", RunOnStartup = true)>] myTimer:TimerInfo) =
+    member _.CheckEpisodes([<TimerTrigger("0 30 5 * * *", RunOnStartup = false)>] myTimer:TimerInfo) =
         task {
             let req = ShowRequest()
             req.Market <- "CZ"
 
             let! episodes = spotifyClient.Shows.Get("280aceAx85AKZslVytXsrB", req)
-            let eps =
-                episodes.Episodes.Items
-                |> Seq.map (fun x -> x.Name, x.Uri)
-
-            for e in eps do
+            let toInsert = episodes.Episodes.Items
+            for e in toInsert do
                 do! e |> Service.upsertEpisode tableClient
             return ()
         }
@@ -65,10 +91,6 @@ type Functions(log:ILogger<Functions>, tableClient:TableClient, spotifyClient:Sp
     member _.Index ([<HttpTrigger(AuthorizationLevel.Anonymous, Route = "{*any}")>] req: HttpRequestData, ctx: FunctionContext) =
         Remoting.createApi()
         |> Remoting.withRouteBuilder FunctionsRouteBuilder.apiPrefix
-        |> Remoting.withErrorHandler (fun exn _ ->
-            log.LogError(exn, "An error occured: {Exception}")
-            ErrorResult.Propagate(exn)
-        )
-        |> Remoting.fromValue service
+        |> Remoting.fromValue (Service.get tableClient)
         |> Remoting.buildRequestHandler
         |> HttpResponseData.fromRequestHandler req
