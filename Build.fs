@@ -27,12 +27,16 @@ Target.create "InstallClient" (fun _ ->
     Tools.yarn "install --frozen-lockfile" clientSrcPath
 )
 
-Target.create "Publish" (fun _ ->
-    [ appPublishPath; appFePublishPath ] |> Shell.cleanDirs
+Target.create "PublishClient" (fun _ ->
+    [ appFePublishPath ] |> Shell.cleanDirs
+    Tools.yarn "build" ""
+)
+
+Target.create "PublishServer" (fun _ ->
+    [ appPublishPath ] |> Shell.cleanDirs
     let publishArgs = sprintf "publish -c Release -o \"%s\"" appPublishPath
     Tools.dotnet publishArgs serverSrcPath
     [ appPublishPath </> "local.settings.json" ] |> File.deleteAll
-    Tools.yarn "build" ""
 )
 
 Target.create "Run" (fun _ ->
@@ -50,7 +54,7 @@ Target.create "Run" (fun _ ->
 
 let dependencies = [
     "InstallClient"
-        ==> "Publish"
+        ==> "PublishClient"
 
     "InstallClient"
         ==> "Run"
