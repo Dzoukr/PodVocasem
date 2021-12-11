@@ -131,7 +131,6 @@ module.exports = {
         host: '0.0.0.0',
         port: CONFIG.devServerPort,
         proxy: CONFIG.devServerProxy,
-        hot: true,
         historyApiFallback: true
     },
     // - babel-loader: transforms JS to old syntax (compatible with old browsers)

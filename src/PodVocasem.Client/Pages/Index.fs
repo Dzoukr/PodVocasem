@@ -9,18 +9,19 @@ open SharedView
 
 type State = {
     Episodes: Response.Episode list
+    IsLoading : bool
 }
 
 type Msg =
     | GetEpisodes
     | EpisodesDownloaded of Response.Episode list
 
-let init () = { Episodes = [] }, Cmd.ofMsg GetEpisodes
+let init () = { Episodes = []; IsLoading = false }, Cmd.ofMsg GetEpisodes
 
 let update (msg:Msg) (model:State) : State * Cmd<Msg> =
     match msg with
-    | GetEpisodes -> model, Cmd.OfAsync.perform Server.service.GetEpisodes () EpisodesDownloaded
-    | EpisodesDownloaded episodes -> { model with Episodes = episodes }, Cmd.none
+    | GetEpisodes -> { model with IsLoading = true }, Cmd.OfAsync.perform Server.service.GetEpisodes () EpisodesDownloaded
+    | EpisodesDownloaded episodes -> { model with Episodes = episodes; IsLoading = false }, Cmd.none
 
 let podcastBtn link (svg:string) (name:string) =
     Html.a [
@@ -38,7 +39,8 @@ let podcastBtn link (svg:string) (name:string) =
 
 open Fable.Core.JsInterop
 
-let mcsPath = importDefault "../assets/img/mcs.jpg"
+let mcs : string = importDefault "../assets/img/mcs.jpg"
+let loader : string = importDefault "../assets/img/loader.png"
 
 [<ReactComponent>]
 let IndexView () =
@@ -84,10 +86,15 @@ let IndexView () =
                     Html.classed Html.section "mt-12" [
                         Html.divClassed "relative pb-20 lg:pb-28" [
                             Html.divClassed "relative mx-auto" [
-                                Html.divClassed "grid gap-8 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none" [
-                                    for e in state.Episodes do
-                                        yield playBox e
-                                ]
+                                if state.IsLoading then
+                                    Html.divClassed "flex justify-center h-24" [
+                                        Html.img [ prop.src loader; prop.className "animate-spin" ]
+                                    ]
+                                else
+                                    Html.divClassed "grid gap-8 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none" [
+                                        for e in state.Episodes do
+                                            yield playBox e
+                                    ]
                             ]
                         ]
                     ]
@@ -100,7 +107,7 @@ let IndexView () =
                 Html.divClassed "max-w-screen-xl px-4 py-12 mx-auto sm:px-6 md:flex md:items-center lg:px-8" [
                     Html.img [
                         prop.className "mb-2 md:mr-4"
-                        prop.src mcsPath
+                        prop.src mcs
                     ]
                     Html.p [
                         Html.text "Roman \"Džoukr\" Provazník a Petr \"Poli\" Polák v novém IT podcastu, který rozhodně neplave po povrchu. Zajímaví hosté a neotřelá témata do hloubky v hodinovém pořadu vysílaném přímo "

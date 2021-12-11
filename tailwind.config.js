@@ -1,6 +1,5 @@
 module.exports = {
-    mode: 'jit',
-    purge: [
+    content: [
         './src/**/*.html',
         './src/**/*.fs',
         '.fable-build/**/*.js',
@@ -30,6 +29,5 @@ module.exports = {
             }),
         },
     },
-    variants: {},
     plugins: [],
 }
