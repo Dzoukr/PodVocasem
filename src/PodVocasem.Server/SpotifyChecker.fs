@@ -16,7 +16,6 @@ type SpotifyChecker (logger:ILogger<SpotifyChecker>, spotifyClient:SpotifyClient
         let timer = new PeriodicTimer(TimeSpan.FromHours(1))
         task {
             while not stoppingToken.IsCancellationRequested do
-                let! _ = timer.WaitForNextTickAsync(stoppingToken)
 
                 logger.LogInformation("Checking Spotify API for new episodes")
 
@@ -30,5 +29,7 @@ type SpotifyChecker (logger:ILogger<SpotifyChecker>, spotifyClient:SpotifyClient
 
                 for e in toInsert do
                     do! e |> upsertEpisode tableClient
-                return ()
+
+                let! _ = timer.WaitForNextTickAsync(stoppingToken)
+                ()
         }
