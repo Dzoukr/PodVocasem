@@ -13,7 +13,7 @@ RUN dotnet run Publish
 
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine
-COPY --from=build /workspace/publish /app
+COPY --from=build /workspace/publish/app /app
 WORKDIR /app
 EXPOSE 80
 ENTRYPOINT [ "dotnet", "PodVocasem.Server.dll" ]
