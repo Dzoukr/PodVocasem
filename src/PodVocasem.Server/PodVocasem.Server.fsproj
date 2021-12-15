@@ -8,8 +8,8 @@
 <!--        <Compile Include="Functions.fs" />-->
         <Compile Include="Service.fs" />
         <Compile Include="WebApp.fs" />
-        <Compile Include="Startup.fs" />
         <Compile Include="SpotifyChecker.fs" />
+        <Compile Include="Startup.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
     <ItemGroup>

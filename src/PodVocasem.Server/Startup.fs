@@ -19,6 +19,7 @@ type Startup(cfg:IConfiguration, env:IWebHostEnvironment) =
             .AddApplicationInsightsTelemetry(cfg.["APPINSIGHTS_INSTRUMENTATIONKEY"])
             .AddSingleton<TableClient>(TableClient(cfg.["StorageAccount"], "Episodes"))
             .AddSingleton<SpotifyClient>(SpotifyClient(config))
+            .AddHostedService<SpotifyChecker.SpotifyChecker>()
             .AddGiraffe() |> ignore
     member _.Configure(app:IApplicationBuilder) =
         app
