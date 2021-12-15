@@ -1,8 +1,8 @@
 FSharp.Core
-Microsoft.Azure.Functions.Worker.Extensions.Http
-Microsoft.Azure.Functions.Worker.Extensions.Timer
-Microsoft.Azure.Functions.Worker.Sdk
-Microsoft.Azure.Functions.Worker
-Fable.Remoting.AzureFunctions.Worker
+Microsoft.ApplicationInsights.AspNetCore
+Giraffe
+Giraffe.GoodRead
+Fable.Remoting.Giraffe
+FsToolkit.ErrorHandling.TaskResult
 Tables.FSharp
 SpotifyAPI.Web

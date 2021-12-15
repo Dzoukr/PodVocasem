@@ -27,14 +27,14 @@ var CONFIG = {
     indexHtmlTemplate: './src/PodVocasem.Client/index.html',
     fsharpEntry: './.fable-build/App.js',
     cssEntry: './src/PodVocasem.Client/styles/styles.css',
-    outputDir: './publish/app-fe',
+    outputDir: './publish/app/public',
     assetsDir: './src/PodVocasem.Client/public',
     devServerPort: 8080,
     // When using webpack-dev-server, you may need to redirect some calls
     // to a external API server. See https://webpack.js.org/configuration/dev-server/#devserver-proxy
     devServerProxy: {
         '/api/**': {
-            target: 'http://localhost:' + (process.env.SERVER_PROXY_PORT || "7071"),
+            target: 'http://localhost:' + (process.env.SERVER_PROXY_PORT || "5000"),
             changeOrigin: true
         },
         '/socket/**': {
