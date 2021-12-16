@@ -1,18 +1,20 @@
 name: CI
 
 on:
-#  workflow_dispatch:
-#    inputs:
-#      deploy:
-#        description: 'Deploy?'
-#        required: false
-#        default: 'false'
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Deploy?'
+        required: false
+        default: 'false'
   push:
     branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PUSH: github.event.inputs.deploy == 'true'
     steps:
       - uses: actions/checkout@v2
 
@@ -37,7 +39,7 @@ jobs:
         with:
           context: ./
           file: ./Dockerfile
-          push: true
+          push: ${{ env.PUSH }}
           tags: dzoukr/podvocasem:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
