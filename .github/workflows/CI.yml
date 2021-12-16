@@ -13,8 +13,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      PUSH: github.event.inputs.deploy == 'true'
     steps:
       - uses: actions/checkout@v2
 
@@ -39,8 +37,8 @@ jobs:
         with:
           context: ./
           file: ./Dockerfile
-          push: ${{ env.PUSH }}
-          tags: dzoukr/podvocasem:latest
+          push: ${{ github.event.inputs.deploy == 'true' }}
+          tags: dzoukr/podvocasem:latest, dzoukr/podvocasem:${{ github.sha }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
       - # Temp fix
@@ -50,21 +48,14 @@ jobs:
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
-#
-#
-#  deploy:
-#    needs: build
-#    runs-on: ubuntu-latest
-#    if: github.event.inputs.deploy == 'true'
-#    steps:
-#      - name: Download app artifact
-#        uses: actions/download-artifact@v2.0.5
-#        with:
-#          name: app
-#          path: app
-#      - name: Deploy to FunctionApp
-#        uses: Azure/functions-action@v1.4.4
-#        with:
-#          app-name: podvocasem-web
-#          package: app
-#          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event.inputs.deploy == 'true'
+    steps:
+      - name: Deploy web app
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'myapp'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: 'dzoukr/podvocasem:${{ github.sha }}'
