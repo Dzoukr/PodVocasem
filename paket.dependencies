@@ -11,6 +11,7 @@ nuget Giraffe.GoodRead
 nuget Microsoft.ApplicationInsights.AspNetCore
 nuget Tables.FSharp
 nuget SpotifyAPI.Web
+nuget Azure.Storage.Blobs
 
 nuget Fable.Core
 nuget Fable.React

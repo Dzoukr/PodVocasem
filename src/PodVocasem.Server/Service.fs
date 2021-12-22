@@ -3,6 +3,7 @@
 open System
 open Azure.Data.Tables
 open Azure.Data.Tables.FSharp
+open Azure.Storage.Blobs
 open Newtonsoft.Json
 open PodVocasem.Shared.API.Response
 open SpotifyAPI.Web
@@ -47,7 +48,6 @@ let getEpisodes (client:TableClient) () =
             |> Seq.toList
             |> List.map EpisodeRow.fromEntity
             |> List.sortByDescending (fun x -> x.Published)
-
         return
             data
             |> List.map toEpisode
@@ -57,5 +57,13 @@ let upsertEpisode (client:TableClient) (e:SimpleEpisode) =
     task {
         let entity = e |> EpisodeRow.fromSimpleEpisode |> EpisodeRow.toEntity
         let! _ = client.UpsertEntityAsync(entity, TableUpdateMode.Merge)
+        return ()
+    }
+
+let uploadMessage (client:BlobContainerClient) (data:byte []) =
+    task {
+        let! _ = client.CreateIfNotExistsAsync()
+        let name = DateTimeOffset.UtcNow.ToString("yyyyMMdd-hhmmss.wav")
+        let! _ = client.UploadBlobAsync(name, BinaryData.FromBytes data)
         return ()
     }

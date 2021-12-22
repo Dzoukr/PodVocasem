@@ -1,27 +1,60 @@
 ﻿module PodVocasem.Client.Pages.Index
 
+open Browser
+open Browser.Types
 open Feliz
 open Elmish
 open Feliz.UseElmish
 open PodVocasem.Client
+open PodVocasem.Client.Server
 open PodVocasem.Shared.API
 open SharedView
+open Fable.Core.JsInterop
+open Fable.Remoting.Client
+
 
 type State = {
     Episodes: Response.Episode list
     IsLoading : bool
+    IsUploading : bool
+    MessageSent : bool
 }
 
 type Msg =
     | GetEpisodes
     | EpisodesDownloaded of Response.Episode list
+    | UploadMessage of string
+    | MessageUploaded of ServerResult<unit>
 
-let init () = { Episodes = []; IsLoading = false }, Cmd.ofMsg GetEpisodes
+let init () = { Episodes = []; IsLoading = false; IsUploading = false; MessageSent = false }, Cmd.ofMsg GetEpisodes
+
+let private upload url =
+    async {
+        let! bytes,_ =
+            Http.get url
+            |> Http.sendAndReadBinary
+        return!
+            bytes |> service.UploadMessage
+    }
+
+module Recorder =
+
+    type Recorder = {
+        mediaBlobUrl : string
+        startRecording : unit -> unit
+        stopRecording : unit -> unit
+        status : string
+    }
+
+    let useReactMediaRecorder (useVideo: bool) : Recorder = import "useReactMediaRecorder" "react-media-recorder"
 
 let update (msg:Msg) (model:State) : State * Cmd<Msg> =
     match msg with
-    | GetEpisodes -> { model with IsLoading = true }, Cmd.OfAsync.perform Server.service.GetEpisodes () EpisodesDownloaded
+    | GetEpisodes -> { model with IsLoading = true }, Cmd.OfAsync.perform service.GetEpisodes () EpisodesDownloaded
     | EpisodesDownloaded episodes -> { model with Episodes = episodes; IsLoading = false }, Cmd.none
+    | UploadMessage url -> { model with IsUploading = true }, Cmd.OfAsync.eitherAsResult (fun _ -> upload url) MessageUploaded
+    | MessageUploaded res -> { model with IsUploading = false; MessageSent = true }, Cmd.none
+
 
 let podcastBtn link (svg:string) (name:string) =
     Html.a [
@@ -37,14 +70,23 @@ let podcastBtn link (svg:string) (name:string) =
         ]
     ]
 
-open Fable.Core.JsInterop
-
 let mcs : string = importDefault "../assets/img/mcs.jpg"
 let loader : string = importDefault "../assets/img/loader.png"
+
+
 
 [<ReactComponent>]
 let IndexView () =
     let state, dispatch = React.useElmish(init, update, [| |])
+    let recorder = Recorder.useReactMediaRecorder false
+
+    let canRecord =
+        recorder.status = "idle"
+        || recorder.status = "stopped"
+        || recorder.status = "acquiring_media"
+
+    let isRecording = recorder.status = "recording"
+    let isRecorded = recorder.status = "stopped"
 
     let playBox (e:Response.Episode) =
         Html.divClassed "flex flex-col overflow-hidden rounded-lg shadow-lg" [
@@ -62,6 +104,7 @@ let IndexView () =
         ]
 
     Html.divClassed "flex flex-col min-h-screen" [
+
         Html.headerClassed "relative bg-hero py-8 sm:py-16" [
             Html.divClassed "flex flex-col items-start justify-center h-full text-default max-w-screen-xl px-8 md:px-16 lg:px-32" [
                 Html.divClassed "mb-8" [ Html.img [ prop.className "w-24 sm:w-32 md:w-40"; prop.src "/svg/logo.svg" ] ]
@@ -78,6 +121,43 @@ let IndexView () =
                 ]
             ]
         ]
+
+        Html.divClassed "bg-gray-100 px-8 md:px-16 lg:px-32 py-8" [
+            Html.h1 "🔊 Pošli nám vzkaz přímo do vysílání"
+            Html.divClassed "flex flex-col md:flex-row items-center my-4" [
+                if state.MessageSent then
+                    Html.p "Díky za tvůj vzkaz! Uslyšíme se u příštího dílu."
+                elif state.IsUploading then
+                    Html.classed Html.p "animate-pulse" [ Html.text "Ukládáme to k nám do archivu, vydrž!" ]
+                else
+                    if canRecord then
+                        Html.button [
+                            prop.className "btn"
+                            prop.onClick (fun _ -> recorder.startRecording())
+                            prop.text (if isRecorded then "⏺️ Radši to zkusím znovu" else "⏺️ Nahrát vzkaz")
+                        ]
+
+                    if isRecording then
+                        Html.button [
+                            prop.className "btn"
+                            prop.onClick (fun _ -> recorder.stopRecording())
+                            prop.text "⏹️ Ukončit nahrávání"
+                        ]
+
+                        Html.divClassed "" [ Html.text "Můžeš mluvit..." ]
+
+                    if isRecorded then
+                        Html.button [
+                            prop.className "btn"
+                            prop.onClick (fun _ -> recorder.mediaBlobUrl |> UploadMessage |> dispatch)
+                            prop.text "✉️ Poslat do studia"
+                        ]
+
+                        Html.audio [ prop.src recorder.mediaBlobUrl; prop.controls true ]
+
+            ]
+        ]
+
 
         Html.divClassed "flex-grow max-w-full" [
             Html.classed Html.main "block py-12" [

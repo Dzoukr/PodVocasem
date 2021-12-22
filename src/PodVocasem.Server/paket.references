@@ -6,3 +6,4 @@ Fable.Remoting.Giraffe
 FsToolkit.ErrorHandling.TaskResult
 Tables.FSharp
 SpotifyAPI.Web
+Azure.Storage.Blobs
