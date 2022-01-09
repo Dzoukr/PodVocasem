@@ -19,7 +19,7 @@ type Startup(cfg:IConfiguration, env:IWebHostEnvironment) =
         services
             .AddApplicationInsightsTelemetry(cfg.["APPINSIGHTS_INSTRUMENTATIONKEY"])
             .AddSingleton<BlobContainerClient>(BlobContainerClient(cfg.["StorageAccount"], "messages"))
-            .AddSingleton<TableClient>(TableClient(cfg.["StorageAccount"], "Episodes"))
+            .AddSingleton<TableClient>(TableClient(cfg.["StorageAccount"], "EpisodesSpotify"))
             .AddSingleton<SpotifyClient>(SpotifyClient(config))
             .AddHostedService<SpotifyChecker.SpotifyChecker>()
             .AddGiraffe() |> ignore
