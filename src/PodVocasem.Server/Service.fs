@@ -62,7 +62,6 @@ let upsertEpisode (client:TableClient) (e:SimpleEpisode) =
 
 let uploadMessage (client:BlobContainerClient) (data:byte []) =
     task {
-        let! _ = client.CreateIfNotExistsAsync()
         let name = DateTimeOffset.UtcNow.ToString("yyyyMMdd-hhmmss.wav")
         let! _ = client.UploadBlobAsync(name, BinaryData.FromBytes data)
         return ()

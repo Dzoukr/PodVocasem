@@ -15,11 +15,17 @@ type Startup(cfg:IConfiguration, env:IWebHostEnvironment) =
             .CreateDefault()
             .WithAuthenticator(ClientCredentialsAuthenticator(cfg.["SpotifyClientId"], cfg.["SpotifyClientSecret"]))
 
+    let blobClient = BlobContainerClient(cfg.["StorageAccount"], "messages")
+    let _ = blobClient.CreateIfNotExists()
+
+    let tableClient = TableClient(cfg.["StorageAccount"], "EpisodesSpotify")
+    let _ = tableClient.CreateIfNotExists()
+
     member _.ConfigureServices (services:IServiceCollection) =
         services
             .AddApplicationInsightsTelemetry(cfg.["APPINSIGHTS_INSTRUMENTATIONKEY"])
-            .AddSingleton<BlobContainerClient>(BlobContainerClient(cfg.["StorageAccount"], "messages"))
-            .AddSingleton<TableClient>(TableClient(cfg.["StorageAccount"], "EpisodesSpotify"))
+            .AddSingleton<BlobContainerClient>(blobClient)
+            .AddSingleton<TableClient>(tableClient)
             .AddSingleton<SpotifyClient>(SpotifyClient(config))
             .AddHostedService<SpotifyChecker.SpotifyChecker>()
             .AddGiraffe() |> ignore
