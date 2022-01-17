@@ -80,6 +80,13 @@ let IndexView () =
     let state, dispatch = React.useElmish(init, update, [| |])
     let recorder = Recorder.useReactMediaRecorder false
 
+    let maxSerie =
+        state.Episodes
+        |> List.map (fun x -> x.Season)
+        |> List.sortDescending
+        |> List.tryHead
+        |> Option.defaultValue 1
+
     let canRecord =
         recorder.status = "idle"
         || recorder.status = "stopped"
@@ -161,24 +168,24 @@ let IndexView () =
 
         Html.divClassed "flex-grow max-w-full" [
             Html.classed Html.main "block py-12" [
-                Html.classed Html.article "px-8 md:px-16 lg:px-32" [
-                    Html.classed Html.h1 "text-gray-700" [ Html.text "PodVocasem - 1. série" ]
-                    Html.classed Html.section "mt-12" [
-                        Html.divClassed "relative pb-20 lg:pb-28" [
-                            Html.divClassed "relative mx-auto" [
-                                if state.IsLoading then
-                                    Html.divClassed "flex justify-center h-24" [
-                                        Html.img [ prop.src loader; prop.className "animate-spin" ]
-                                    ]
-                                else
+
+                if state.IsLoading then
+                    Html.divClassed "flex justify-center h-24" [
+                        Html.img [ prop.src loader; prop.className "animate-spin" ]
+                    ]
+                else
+                    for s in ([1..maxSerie] |> List.rev) do
+                        Html.classed Html.article "px-8 md:px-16 lg:px-32 pb-12 lg:pb-16" [
+                            Html.classed Html.h1 "text-gray-700" [ Html.text $"PodVocasem - {s}. série" ]
+                            Html.divClassed "relative" [
+                                Html.divClassed "relative mx-auto" [
                                     Html.divClassed "grid gap-8 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none" [
-                                        for e in state.Episodes do
+                                        for e in (state.Episodes |> List.filter (fun x -> x.Season = s)) do
                                             yield playBox e
                                     ]
+                                ]
                             ]
                         ]
-                    ]
-                ]
             ]
         ]
 

@@ -32,7 +32,7 @@ module EpisodeRow =
 
 let private toEpisode (e:EpisodeRow) : Episode =
     let nums = e.Episode.Name.Split("-").[0]
-    let seas = (nums.[1] + nums.[2]) |> int
+    let seas = (string nums.[1] + string nums.[2]) |> int
     {
         Season = seas
         SpotifyHash = e.Episode.Id
