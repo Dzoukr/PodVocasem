@@ -16,20 +16,22 @@ type SpotifyChecker (logger:ILogger<SpotifyChecker>, spotifyClient:SpotifyClient
         let timer = new PeriodicTimer(TimeSpan.FromHours(1))
         task {
             while not stoppingToken.IsCancellationRequested do
+                try
+                    logger.LogInformation("Checking Spotify API for new episodes")
 
-                logger.LogInformation("Checking Spotify API for new episodes")
+                    let req = ShowRequest()
+                    req.Market <- "CZ"
 
-                let req = ShowRequest()
-                req.Market <- "CZ"
+                    let! episodes = spotifyClient.Shows.Get("280aceAx85AKZslVytXsrB", req)
+                    let toInsert = episodes.Episodes.Items
 
-                let! episodes = spotifyClient.Shows.Get("280aceAx85AKZslVytXsrB", req)
-                let toInsert = episodes.Episodes.Items
+                    logger.LogInformation("Found {EpisodesCount} episodes", toInsert.Count)
 
-                logger.LogInformation("Found {EpisodesCount} episodes", toInsert.Count)
+                    for e in toInsert do
+                        do! e |> upsertEpisode tableClient
 
-                for e in toInsert do
-                    do! e |> upsertEpisode tableClient
-
-                let! _ = timer.WaitForNextTickAsync(stoppingToken)
-                ()
+                    let! _ = timer.WaitForNextTickAsync(stoppingToken)
+                    ()
+                with ex ->
+                    logger.LogError(ex, "Spotify update failed")
         }
