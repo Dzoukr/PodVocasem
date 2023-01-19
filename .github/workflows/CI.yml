@@ -29,9 +29,6 @@ jobs:
           file: ./Dockerfile
           push: ${{ github.event.inputs.deploy == 'true' }}
           tags: dzoukr/podvocasem:latest, dzoukr/podvocasem:${{ github.sha }}
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
