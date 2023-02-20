@@ -73,7 +73,31 @@ let podcastBtn link (svg:string) (name:string) =
 let mcs : string = importDefault "../assets/img/mcs.jpg"
 let loader : string = importDefault "../assets/img/loader.png"
 
+let playBox (e:Response.Episode) =
+    Html.divClassed "flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-700" [
+        Html.divClassed "flex-shrink-0 text-gray-50 p-4" [
 
+            Html.divClassed "flex flex-row gap-4" [
+                Html.divClassed "basis-5/12 flex flex-col gap-2" [
+                    Html.img [ prop.className "bg-gray-50 rounded-lg"; prop.src "/img/default.png" ]
+
+                    Html.a [
+                        prop.className "text-center rounded-lg border border-gray-50 p-3 hover:bg-gray-50 hover:text-gray-700"
+                        prop.text "▶ Přehrát epizodu"
+                        prop.href $"https://open.spotify.com/episode/{e.SpotifyHash}?go=1"
+                    ]
+                ]
+                Html.divClassed "basis-7/12 flex flex-col gap-4" [
+                    Html.divClassed "tex-slate-50 font-bold" [
+                        Html.text e.Name
+                    ]
+                    Html.divClassed "line-clamp-6" [
+                        Html.text e.Description
+                    ]
+                ]
+            ]
+        ]
+    ]
 
 [<ReactComponent>]
 let IndexView () =
@@ -94,21 +118,6 @@ let IndexView () =
 
     let isRecording = recorder.status = "recording"
     let isRecorded = recorder.status = "stopped"
-
-    let playBox (e:Response.Episode) =
-        Html.divClassed "flex flex-col overflow-hidden rounded-lg shadow-lg" [
-            Html.divClassed "flex-shrink-0" [
-                Html.iframe [
-                    prop.src $"https://open.spotify.com/embed/episode/{e.SpotifyHash}?theme=0"
-                    prop.width (length.percent 100)
-                    prop.height 232
-                    prop.allow.autoplay
-                    prop.allow.encryptedMedia
-                    prop.allow.fullscreen
-                    prop.allow.pictureInPicture
-                ]
-            ]
-        ]
 
     Html.divClassed "flex flex-col min-h-screen" [
 

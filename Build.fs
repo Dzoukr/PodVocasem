@@ -38,6 +38,7 @@ Target.create "Publish" (fun _ ->
 Target.create "Run" (fun _ ->
     let server = async {
         Environment.setEnvironVar "ASPNETCORE_ENVIRONMENT" "Development"
+        Environment.setEnvironVar "NODE_OPTIONS" "--openssl-legacy-provider"
         Tools.dotnet "watch run" serverSrcPath
     }
     let client = async {

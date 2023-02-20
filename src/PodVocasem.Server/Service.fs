@@ -35,6 +35,8 @@ let private toEpisode (e:EpisodeRow) : Episode =
     let seas = (string nums.[1] + string nums.[2]) |> int
     {
         Season = seas
+        Name = e.Episode.Name
+        Description = e.Episode.Description
         SpotifyHash = e.Episode.Id
     }
 
