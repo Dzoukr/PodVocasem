@@ -241,10 +241,10 @@ let IndexView () =
                             Html.text "Supported by "
                             Html.a [
                                 prop.className "mx-auto mt-2 md:mt-0 md:ml-2"
-                                prop.href "https://www.cngroup.dk"
+                                prop.href "https://www.ciklum.com/we"
                                 prop.children [
                                     Html.img [
-                                        prop.src "/svg/cn-logo-w.svg"
+                                        prop.src "/svg/ciklum-logo.svg"
                                         prop.className "mx-auto mt-2 md:mt-0 md:ml-2 h-10"
                                     ]
                                 ]
