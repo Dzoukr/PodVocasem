@@ -32,13 +32,22 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: build docker image
+      - name: build web docker image
         uses: docker/build-push-action@v2.6.1
         with:
           context: ./
-          file: ./Dockerfile
+          file: ./Dockerfile - Web
           push: ${{ github.event.inputs.deploy == 'true' }}
           tags: dzoukr/podvocasem:latest, dzoukr/podvocasem:${{ github.sha }}
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+      - name: build spotify checker docker image
+        uses: docker/build-push-action@v2.6.1
+        with:
+          context: ./
+          file: ./Dockerfile - SpotifyChecker
+          push: ${{ github.event.inputs.deploy == 'true' }}
+          tags: dzoukr/podvocasem-spotify-checker:latest, dzoukr/podvocasem-spotify-checker:${{ github.sha }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
       - # Temp fix
@@ -48,14 +57,14 @@ jobs:
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.event.inputs.deploy == 'true'
-    steps:
-      - name: Deploy web app
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'podvocasem-web'
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: 'dzoukr/podvocasem:${{ github.sha }}'
+#  deploy:
+#    needs: build
+#    runs-on: ubuntu-latest
+#    if: github.event.inputs.deploy == 'true'
+#    steps:
+#      - name: Deploy web app
+#        uses: azure/webapps-deploy@v2
+#        with:
+#          app-name: 'podvocasem-web'
+#          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+#          images: 'dzoukr/podvocasem:${{ github.sha }}'

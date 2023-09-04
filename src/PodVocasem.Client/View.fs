@@ -2,6 +2,7 @@
 
 open Feliz
 open Router
+open Feliz.UseElmish
 open Elmish
 open SharedView
 
@@ -21,7 +22,8 @@ let update (msg:Msg) (state:State) : State * Cmd<Msg> =
     | UrlChanged page -> { state with Page = page }, Cmd.none
 
 [<ReactComponent>]
-let AppView (state:State) (dispatch:Msg -> unit) =
+let AppView () =
+    let state,dispatch = React.useElmish(init, update)
     let render =
         match state.Page with
         | Page.Index -> Pages.Index.IndexView ()

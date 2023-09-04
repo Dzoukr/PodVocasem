@@ -12,9 +12,10 @@ initializeContext()
 let publishPath = Path.getFullName "publish"
 let srcPath = Path.getFullName "src"
 let clientSrcPath = srcPath </> "PodVocasem.Client"
-let serverSrcPath = srcPath </> "PodVocasem.Server"
-let appPublishPath = publishPath </> "app"
-let appFePublishPath = publishPath </> "app-fe"
+let webSrcPath = srcPath </> "PodVocasem.Server"
+let jobSrcPath = srcPath </> "PodVocasem.SpotifyChecker"
+let webAppPublishPath = publishPath </> "app-web"
+let jobAppPublishPath = publishPath </> "app-job"
 
 // Targets
 let clean proj = [ proj </> "bin"; proj </> "obj" ] |> Shell.cleanDirs
@@ -27,19 +28,25 @@ Target.create "InstallClient" (fun _ ->
     Tools.yarn "install --frozen-lockfile" clientSrcPath
 )
 
-Target.create "Publish" (fun _ ->
-    [ appPublishPath ] |> Shell.cleanDirs
-    let publishArgs = sprintf "publish -c Release -o \"%s\"" appPublishPath
-    Tools.dotnet publishArgs serverSrcPath
-    [ appPublishPath </> "appsettings.Development.json" ] |> File.deleteAll
+Target.create "PublishWeb" (fun _ ->
+    [ webAppPublishPath ] |> Shell.cleanDirs
+    let publishArgs = sprintf "publish -c Release -o \"%s\"" webAppPublishPath
+    Tools.dotnet publishArgs webSrcPath
+    [ webAppPublishPath </> "appsettings.Development.json" ] |> File.deleteAll
     Tools.yarn "build" ""
+)
+
+Target.create "PublishJob" (fun _ ->
+    [ jobAppPublishPath ] |> Shell.cleanDirs
+    let publishArgs = sprintf "publish -c Release -o \"%s\"" jobAppPublishPath
+    Tools.dotnet publishArgs jobSrcPath
+    [ jobAppPublishPath </> "appsettings.Development.json" ] |> File.deleteAll
 )
 
 Target.create "Run" (fun _ ->
     let server = async {
         Environment.setEnvironVar "ASPNETCORE_ENVIRONMENT" "Development"
-        Environment.setEnvironVar "NODE_OPTIONS" "--openssl-legacy-provider"
-        Tools.dotnet "watch run" serverSrcPath
+        Tools.dotnet "watch run" webSrcPath
     }
     let client = async {
         Tools.yarn "start" ""
@@ -52,7 +59,7 @@ Target.create "Run" (fun _ ->
 
 let dependencies = [
     "InstallClient"
-        ==> "Publish"
+        ==> "PublishWeb"
 
     "InstallClient"
         ==> "Run"

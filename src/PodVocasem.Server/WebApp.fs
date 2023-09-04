@@ -2,16 +2,27 @@
 
 open Azure.Data.Tables
 open Azure.Storage.Blobs
+open FsToolkit.ErrorHandling
 open Giraffe
 open Fable.Remoting.Server
 open Fable.Remoting.Giraffe
 open Giraffe.GoodRead
 open Microsoft.Extensions.Logging
 open PodVocasem.Shared.API
-open PodVocasem.Server.Service
+open PodVocasem.Libraries.Service
+
+let private toEpisode (e:EpisodeRow) : Response.Episode =
+    let nums = e.Episode.Name.Split("-").[0]
+    let seas = (string nums.[1] + string nums.[2]) |> int
+    {
+        Season = seas
+        Name = e.Episode.Name
+        Description = e.Episode.Description
+        SpotifyHash = e.Episode.Id
+    }
 
 let getService tableClient blobClient = {
-    GetEpisodes = getEpisodes tableClient >> Async.AwaitTask
+    GetEpisodes = getEpisodes tableClient >> Task.map (List.map toEpisode) >> Async.AwaitTask
     UploadMessage = uploadMessage blobClient >> Async.AwaitTask
 }
 

@@ -1,11 +1,10 @@
-﻿module PodVocasem.Server.Service
+﻿module PodVocasem.Libraries.Service
 
 open System
 open Azure.Data.Tables
 open Azure.Data.Tables.FSharp
 open Azure.Storage.Blobs
 open Newtonsoft.Json
-open PodVocasem.Shared.API.Response
 open SpotifyAPI.Web
 
 type EpisodeRow = {
@@ -30,15 +29,7 @@ module EpisodeRow =
             Published = (e.GetDateTimeOffset "Published").Value
         }
 
-let private toEpisode (e:EpisodeRow) : Episode =
-    let nums = e.Episode.Name.Split("-").[0]
-    let seas = (string nums.[1] + string nums.[2]) |> int
-    {
-        Season = seas
-        Name = e.Episode.Name
-        Description = e.Episode.Description
-        SpotifyHash = e.Episode.Id
-    }
+
 
 let getEpisodes (client:TableClient) () =
     task {
@@ -52,7 +43,7 @@ let getEpisodes (client:TableClient) () =
             |> List.sortByDescending (fun x -> x.Published)
         return
             data
-            |> List.map toEpisode
+
     }
 
 let upsertEpisode (client:TableClient) (e:SimpleEpisode) =

@@ -10,11 +10,6 @@ open Giraffe
 open SpotifyAPI.Web
 
 type Startup(cfg:IConfiguration, env:IWebHostEnvironment) =
-    let config =
-        SpotifyClientConfig
-            .CreateDefault()
-            .WithAuthenticator(ClientCredentialsAuthenticator(cfg.["SpotifyClientId"], cfg.["SpotifyClientSecret"]))
-
     let blobClient = BlobContainerClient(cfg.["StorageAccount"], "messages")
     let _ = blobClient.CreateIfNotExists()
 
@@ -26,8 +21,6 @@ type Startup(cfg:IConfiguration, env:IWebHostEnvironment) =
             .AddApplicationInsightsTelemetry(cfg.["APPINSIGHTS_INSTRUMENTATIONKEY"])
             .AddSingleton<BlobContainerClient>(blobClient)
             .AddSingleton<TableClient>(tableClient)
-            .AddSingleton<SpotifyClient>(SpotifyClient(config))
-            .AddHostedService<SpotifyChecker.SpotifyChecker>()
             .AddGiraffe() |> ignore
     member _.Configure(app:IApplicationBuilder) =
         app

@@ -12,6 +12,7 @@ nuget Microsoft.ApplicationInsights.AspNetCore
 nuget Tables.FSharp
 nuget SpotifyAPI.Web
 nuget Azure.Storage.Blobs
+nuget Microsoft.Extensions.Hosting
 
 nuget Fable.Core
 nuget Fable.React
@@ -19,10 +20,6 @@ nuget Fable.Remoting.Client
 nuget Feliz
 nuget Feliz.Router
 nuget Feliz.UseElmish
-nuget Fable.Elmish
-nuget Fable.Elmish.React
-nuget Fable.Elmish.Debugger
-nuget Fable.Elmish.HMR
 nuget FsToolkit.ErrorHandling.TaskResult
 
 group Build

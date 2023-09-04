@@ -9,11 +9,11 @@ WORKDIR /workspace
 COPY . .
 RUN dotnet tool restore
 
-RUN dotnet run Publish
+RUN dotnet run PublishWeb
 
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine
-COPY --from=build /workspace/publish/app /app
+COPY --from=build /workspace/publish/app-web /app
 WORKDIR /app
 EXPOSE 80
 ENTRYPOINT [ "dotnet", "PodVocasem.Server.dll" ]

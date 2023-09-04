@@ -1,21 +1,15 @@
-﻿module PodVocasem.Server.SpotifyChecker
+﻿module PodVocasem.SpotifyChecker.SpotifyChecker
 
-open System
-open System.Threading
-open Azure.Data.Tables
+open System.Threading.Tasks
 open Microsoft.Extensions.Hosting
 open Microsoft.Extensions.Logging
-open FSharp.Control.Tasks
 open SpotifyAPI.Web
-open PodVocasem.Server.Service
+open Azure.Data.Tables
 
-type SpotifyChecker (logger:ILogger<SpotifyChecker>, spotifyClient:SpotifyClient, tableClient:TableClient) =
-    inherit BackgroundService()
-
-    override this.ExecuteAsync(stoppingToken) =
-        let timer = new PeriodicTimer(TimeSpan.FromHours(1))
-        task {
-            while not stoppingToken.IsCancellationRequested do
+type SpotifyChecker(host:IHostApplicationLifetime, logger:ILogger<_>, spotifyClient:SpotifyClient, tableClient:TableClient) =
+    interface IHostedService with
+        member this.StartAsync _ =
+            task {
                 try
                     logger.LogInformation("Checking Spotify API for new episodes")
 
@@ -28,10 +22,11 @@ type SpotifyChecker (logger:ILogger<SpotifyChecker>, spotifyClient:SpotifyClient
                     logger.LogInformation("Found {EpisodesCount} episodes", toInsert.Count)
 
                     for e in toInsert do
-                        do! e |> upsertEpisode tableClient
-
-                    let! _ = timer.WaitForNextTickAsync(stoppingToken)
+                        do! e |> PodVocasem.Libraries.Service.upsertEpisode tableClient
                     ()
+                    host.StopApplication()
                 with ex ->
                     logger.LogError(ex, "Spotify update failed")
-        }
+            }
+
+        member this.StopAsync _ = Task.CompletedTask
