@@ -36,7 +36,7 @@ jobs:
         uses: docker/build-push-action@v2.6.1
         with:
           context: ./
-          file: ./Dockerfile - Web
+          file: ./Web.Dockerfile
           push: ${{ github.event.inputs.deploy == 'true' }}
           tags: dzoukr/podvocasem:latest, dzoukr/podvocasem:${{ github.sha }}
           cache-from: type=local,src=/tmp/.buildx-cache
@@ -45,7 +45,7 @@ jobs:
         uses: docker/build-push-action@v2.6.1
         with:
           context: ./
-          file: ./Dockerfile - SpotifyChecker
+          file: ./SpotifyChecker.Dockerfile
           push: ${{ github.event.inputs.deploy == 'true' }}
           tags: dzoukr/podvocasem-spotify-checker:latest, dzoukr/podvocasem-spotify-checker:${{ github.sha }}
           cache-from: type=local,src=/tmp/.buildx-cache
