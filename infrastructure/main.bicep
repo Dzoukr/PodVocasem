@@ -1,3 +1,5 @@
+param commithash string
+
 @secure()
 param storageaccount string
 
@@ -18,14 +20,14 @@ param logAnalyticsName string = 'podvocasem-logs'
 param webAppName string = 'podvocasem-web'
 
 @description('Specifies the docker container image to deploy.')
-param webAppImage string = 'dzoukr/podvocasem:latest'
+param webAppImage string = 'dzoukr/podvocasem:${commithash}'
 
 // Jobs
 @description('Specifies the name of the spotify checker job.')
 param jobAppName string = 'podvocasem-spotify-checker'
 
 @description('Specifies the docker container image to deploy.')
-param jobAppImage string = 'dzoukr/podvocasem-spotify-checker:latest'
+param jobAppImage string = 'dzoukr/podvocasem-spotify-checker:${commithash}'
 
 @description('Specifies the name of the container app environment.')
 // param containerAppEnvName string = 'env-${uniqueString(resourceGroup().id)}'

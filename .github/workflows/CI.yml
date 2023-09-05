@@ -75,6 +75,6 @@ jobs:
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           resourceGroupName: podvocasem
-          template: .infrastructure/main.bicep
-          parameters: 'storageaccount=${{ secrets.STORAGE_ACCOUNT }} spotifyclientid=${{ secrets.SPOTIFY_CLIENT_ID }} spotifyclientsecret=${{ secrets.SPOTIFY_CLIENT_SECRET }}'
+          template: ./infrastructure/main.bicep
+          parameters: 'commithash=${{ github.sha }} storageaccount=${{ secrets.STORAGE_ACCOUNT }} spotifyclientid=${{ secrets.SPOTIFY_CLIENT_ID }} spotifyclientsecret=${{ secrets.SPOTIFY_CLIENT_SECRET }}'
           failOnStdErr: false
