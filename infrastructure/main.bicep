@@ -156,7 +156,7 @@ resource spotifyChecker 'Microsoft.App/jobs@2023-05-01' = {
             replicaTimeout: 1800
             triggerType: 'Schedule'
             scheduleTriggerConfig: {
-                cronExpression: '0 * * * *'
+                cronExpression: '0 8 * * MON'
                 replicaCompletionCount: 1
             }
             
