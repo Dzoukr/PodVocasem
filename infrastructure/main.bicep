@@ -95,15 +95,15 @@ resource containerAppEnv 'Microsoft.App/managedEnvironments@2023-05-01' = {
     }
 }
 
-resource myManagedCert 'Microsoft.App/managedEnvironments/managedCertificates@2022-11-01-preview' = {
-    name: 'managed-cert'
-    location: location
-    parent: containerAppEnv
-    properties: {
-      domainControlValidation: 'CNAME'
-      subjectName: 'www.podvocasem.cz'
-    }
-  }
+// resource myManagedCert 'Microsoft.App/managedEnvironments/managedCertificates@2023-05-02-preview' = {
+//     name: 'managed-cert'
+//     location: location
+//     parent: containerAppEnv
+//     properties: {
+//       domainControlValidation: 'CNAME'
+//       subjectName: 'www.podvocasem.cz'
+//     }
+//   }
 
 resource webApp 'Microsoft.App/containerApps@2023-05-01' = {
     name: webAppName
@@ -121,13 +121,13 @@ resource webApp 'Microsoft.App/containerApps@2023-05-01' = {
                         weight: 100
                     }
                 ]
-                customDomains:[
-                    {
-                      bindingType: 'SniEnabled'
-                      certificateId: myManagedCert.id
-                      name: 'www.podvocasem.cz'
-                    }
-                ]
+                // customDomains:[
+                //     {
+                //       bindingType: 'SniEnabled'
+                //       certificateId: myManagedCert.id
+                //       name: 'www.podvocasem.cz'
+                //     }
+                // ]
             }
             secrets: [
                 {
