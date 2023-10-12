@@ -91,7 +91,7 @@ let playBox (e:Response.Episode) =
                     Html.divClassed "tex-slate-50 font-bold" [
                         Html.text e.Name
                     ]
-                    Html.divClassed "line-clamp-6" [
+                    Html.divClassed "line-clamp-5" [
                         Html.text e.Description
                     ]
                 ]
@@ -123,7 +123,7 @@ let IndexView () =
 
         Html.headerClassed "relative bg-hero py-8 sm:py-16" [
             Html.divClassed "flex flex-col items-start justify-center h-full text-default max-w-screen-xl px-8 md:px-16 lg:px-32" [
-                Html.divClassed "mb-8" [ Html.img [ prop.className "w-24 sm:w-32 md:w-40"; prop.src "/svg/logo.svg" ] ]
+                Html.divClassed "mb-8" [ Html.img [ prop.className "w-24 sm:w-32 md:w-40"; prop.src "/img/logo.png" ] ]
                 Html.classed Html.h1 "text-4xl font-semibold leading-none mb-4 sm:text-7xl md:text-8xl" [ Html.text "IT podcast, který rozhodně neplave po povrchu." ]
                 Html.divClassed "text-xl leading-tight mb-12 sm:text-2xl md:text-3xl" [
                     Html.text "Zajímaví hosté v hodinovém pořadu vysílaném "
