@@ -1,12 +1,12 @@
 name: CI
 
 on:
-  workflow_dispatch:
-    inputs:
-      deploy:
-        description: 'Deploy?'
-        required: false
-        default: 'false'
+#  workflow_dispatch:
+#    inputs:
+#      deploy:
+#        description: 'Deploy?'
+#        required: false
+#        default: 'false'
   push:
     branches: [ master ]
 
@@ -16,65 +16,24 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-
-      - name: Docker cache
-        uses: actions/cache@v2
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v4.0.0
         with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-buildx-
+          dotnet-version: 8.0.100
 
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
+      - name: Install Tools
+        run: dotnet tool restore
+
+      - name: Generate JSON
+        run: dotnet run generateJson "${{ secrets.SPOTIFY_CLIENT_ID }}" "${{ secrets.SPOTIFY_CLIENT_SECRET }}"
+
+      - name: Publish
+        run: dotnet run Publish
+
+      - name: Build And Deploy
+        uses: Azure/static-web-apps-deploy@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: build web docker image
-        uses: docker/build-push-action@v2.6.1
-        with:
-          context: ./
-          file: ./Web.Dockerfile
-          push: ${{ github.event.inputs.deploy == 'true' }}
-          tags: dzoukr/podvocasem:latest, dzoukr/podvocasem:${{ github.sha }}
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
-
-      - name: build spotify checker docker image
-        uses: docker/build-push-action@v2.6.1
-        with:
-          context: ./
-          file: ./SpotifyChecker.Dockerfile
-          push: ${{ github.event.inputs.deploy == 'true' }}
-          tags: dzoukr/podvocasem-spotify-checker:latest, dzoukr/podvocasem-spotify-checker:${{ github.sha }}
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
-
-      - name: Move cache
-        run: |
-          rm -rf /tmp/.buildx-cache
-          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.event.inputs.deploy == 'true'
-    steps:
-      - uses: actions/checkout@v2
-
-      # Log into Azure
-      - uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-        # Deploy Bicep file
-      - name: deploy
-        uses: azure/arm-deploy@v1
-        with:
-          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-          resourceGroupName: podvocasem
-          template: ./infrastructure/main.bicep
-          parameters: 'commithash=${{ github.sha }} storageaccount=${{ secrets.STORAGE_ACCOUNT }} spotifyclientid=${{ secrets.SPOTIFY_CLIENT_ID }} spotifyclientsecret=${{ secrets.SPOTIFY_CLIENT_SECRET }}'
-          failOnStdErr: false
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_TOKEN }}
+          skip_app_build: true
+          action: 'upload'
+          app_location: 'publish/app'

@@ -2,17 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PodVocasem.Client", "src\PodVocasem.Client\PodVocasem.Client.fsproj", "{7C716DBC-68B5-462F-9E3D-F9D2D30E480F}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PodVocasem.Server", "src\PodVocasem.Server\PodVocasem.Server.fsproj", "{1C122FE9-9252-4E8D-9EDD-2838BF0439DE}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PodVocasem.Shared", "src\PodVocasem.Shared\PodVocasem.Shared.fsproj", "{E264AE7C-45A3-4C82-A82E-724A32AFC859}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PodVocasem.SpotifyChecker", "src\PodVocasem.SpotifyChecker\PodVocasem.SpotifyChecker.fsproj", "{1405A73C-AC5E-4CAF-87A0-AD4FEEBFB30C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{0E2F73D1-E7E3-4DF1-BE67-1D790F3F1977}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Build", "Build.fsproj", "{ED6CD552-97DE-4941-BE13-5B3226C251D1}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PodVocasem.Libraries", "src\PodVocasem.Libraries\PodVocasem.Libraries.fsproj", "{39487E3B-3572-4F5B-B4A5-179671A74FDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,26 +16,10 @@ Global
 		{7C716DBC-68B5-462F-9E3D-F9D2D30E480F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C716DBC-68B5-462F-9E3D-F9D2D30E480F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C716DBC-68B5-462F-9E3D-F9D2D30E480F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C122FE9-9252-4E8D-9EDD-2838BF0439DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C122FE9-9252-4E8D-9EDD-2838BF0439DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C122FE9-9252-4E8D-9EDD-2838BF0439DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C122FE9-9252-4E8D-9EDD-2838BF0439DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E264AE7C-45A3-4C82-A82E-724A32AFC859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E264AE7C-45A3-4C82-A82E-724A32AFC859}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E264AE7C-45A3-4C82-A82E-724A32AFC859}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E264AE7C-45A3-4C82-A82E-724A32AFC859}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1405A73C-AC5E-4CAF-87A0-AD4FEEBFB30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1405A73C-AC5E-4CAF-87A0-AD4FEEBFB30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1405A73C-AC5E-4CAF-87A0-AD4FEEBFB30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1405A73C-AC5E-4CAF-87A0-AD4FEEBFB30C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ED6CD552-97DE-4941-BE13-5B3226C251D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED6CD552-97DE-4941-BE13-5B3226C251D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED6CD552-97DE-4941-BE13-5B3226C251D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED6CD552-97DE-4941-BE13-5B3226C251D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39487E3B-3572-4F5B-B4A5-179671A74FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39487E3B-3572-4F5B-B4A5-179671A74FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39487E3B-3572-4F5B-B4A5-179671A74FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39487E3B-3572-4F5B-B4A5-179671A74FDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ED6CD552-97DE-4941-BE13-5B3226C251D1} = {0E2F73D1-E7E3-4DF1-BE67-1D790F3F1977}

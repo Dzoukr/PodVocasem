@@ -12,7 +12,7 @@ export default defineConfig({
         }
     },
     build: {
-        outDir:"../../publish/app-web/public"
+        outDir:"../../publish/app/public"
     }
 
 })
