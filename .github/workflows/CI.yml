@@ -1,12 +1,8 @@
 name: CI
 
 on:
-#  workflow_dispatch:
-#    inputs:
-#      deploy:
-#        description: 'Deploy?'
-#        required: false
-#        default: 'false'
+  schedule:
+    - cron: '0 6 * * MON'
   push:
     branches: [ master ]
 
