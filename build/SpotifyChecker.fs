@@ -33,12 +33,15 @@ let generateJson (cfg:SpotifyConfiguration) (jsonFilename:string) =
             .CreateDefault()
             .WithAuthenticator(ClientCredentialsAuthenticator(cfg.ClientId, cfg.ClientSecret))
     let client = SpotifyClient(config)
+
     task {
         let req = ShowRequest()
         req.Market <- "CZ"
 
         let! episodes = client.Shows.Get("280aceAx85AKZslVytXsrB", req)
         let rows = ResizeArray<Episode>()
+        episodes.Episodes.Limit <- 500
+
         episodes.Episodes.Items
         |> Seq.iter (Episode.ofSimpleEpisode >> rows.Add)
 

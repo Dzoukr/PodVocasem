@@ -27,6 +27,7 @@ let AppView () =
     let render =
         match state.Page with
         | Page.Index -> Pages.Index.IndexView ()
+        | Page.Partnership -> Html.div "TODO"
     React.router [
         router.pathMode
         router.onUrlChanged (Page.parseFromUrlSegments >> UrlChanged >> dispatch)

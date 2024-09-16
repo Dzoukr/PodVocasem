@@ -86,6 +86,25 @@ let playBox (e:Episode) =
         ]
     ]
 
+let partnerBox (logo:string) (desc:string) (linkHref:string) (linkName:string) =
+    Html.divClassed "py-8 sm:py-16 px-8 md:px-16 lg:px-32 text-center text-gray-700" [
+        Html.divClassed "text-2xl font-semibold" [ Html.text "Partnerem této série je" ]
+        Html.a [
+            prop.href linkHref
+            prop.children [
+                Html.img [ prop.src logo; prop.className "mx-auto w-64" ]
+            ]
+        ]
+        Html.divClassed "mx-auto w-96 text-lg" [ Html.text desc ]
+
+        Html.divClassed "mx-auto w-96 mt-2 underline text-lg font-medium" [
+            Html.a [
+                prop.href linkHref
+                prop.text linkName
+            ]
+        ]
+    ]
+
 [<ReactComponent>]
 let IndexView () =
     let state, dispatch = React.useElmish(init, update, [| |])
@@ -111,10 +130,11 @@ let IndexView () =
                 Html.divClassed "sm:flex items-center" [
                     podcastBtn "https://open.spotify.com/show/280aceAx85AKZslVytXsrB?si=50b87e50890746b7" "spotify" "Spotify"
                     podcastBtn "https://podcasts.apple.com/us/podcast/podvocasem/id1590431276" "apple-podcast" "Apple Podcasts"
-                    podcastBtn "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkLnBvZHZvY2FzZW0uY3ovcnNz" "google-podcast" "Google Podcasts"
                 ]
             ]
         ]
+
+        partnerBox "/img/partners/vivio.png" "PŘINÁŠÍME ŽIVOT DO VAŠÍ ONLINE REKLAMY. Pomůžeme vám s PPC kampaněmi i celkovou marketingovou strategií." "https://www.vivio.cz/" "www.vivio.cz"
 
         Html.divClassed "flex-grow max-w-full" [
             Html.classed Html.main "block py-12" [
@@ -165,11 +185,6 @@ let IndexView () =
                             prop.href "https://podcasts.apple.com/us/podcast/podvocasem/id1590431276"
                             prop.className "hover:text-gray-200"
                             prop.children [ Html.img [ prop.className "mx-2 h-8 w-8"; prop.src "/svg/apple-podcast-bw.svg" ] ]
-                        ]
-                        Html.a [
-                            prop.href "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkLnBvZHZvY2FzZW0uY3ovcnNz"
-                            prop.className "hover:text-gray-200"
-                            prop.children [ Html.img [ prop.className "mx-2 h-8 w-8"; prop.src "/svg/google-podcast-bw.svg" ] ]
                         ]
                         Html.a [
                             prop.href "https://twitter.com/podvocasem"

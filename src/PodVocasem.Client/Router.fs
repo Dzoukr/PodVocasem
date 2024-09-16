@@ -6,6 +6,7 @@ open Fable.Core.JsInterop
 
 type Page =
     | Index
+    | Partnership
 
 [<RequireQualifiedAccess>]
 module Page =
@@ -13,12 +14,14 @@ module Page =
 
     let parseFromUrlSegments = function
         | [ ] -> Page.Index
+        | [ "partnership" ] -> Page.Partnership
         | _ -> defaultPage
 
     let noQueryString segments : string list * (string * string) list = segments, []
 
     let toUrlSegments = function
         | Page.Index -> [ ] |> noQueryString
+        | Page.Partnership -> [ "partnership" ] |> noQueryString
 
 [<RequireQualifiedAccess>]
 module Router =
