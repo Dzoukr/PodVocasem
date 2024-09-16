@@ -3,6 +3,12 @@ name: CI
 on:
   schedule:
     - cron: '0 6 * * MON'
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Deploy?'
+        required: false
+        default: 'false'
   push:
     branches: [ master ]
 
