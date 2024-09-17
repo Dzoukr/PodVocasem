@@ -38,12 +38,11 @@ let generateJson (cfg:SpotifyConfiguration) (jsonFilename:string) =
         let req = ShowRequest()
         req.Market <- "CZ"
 
-        let! episodes = client.Shows.Get("280aceAx85AKZslVytXsrB", req)
+        let! show = client.Shows.Get("280aceAx85AKZslVytXsrB", req)
         let rows = ResizeArray<Episode>()
-        episodes.Episodes.Limit <- 500
 
-        episodes.Episodes.Items
-        |> Seq.iter (Episode.ofSimpleEpisode >> rows.Add)
+        let! episodes = client.PaginateAll(show.Episodes)
+        episodes |> Seq.iter (Episode.ofSimpleEpisode >> rows.Add)
 
         use stream = File.Create jsonFilename
         do! JsonSerializer.SerializeAsync(stream, rows)
