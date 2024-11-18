@@ -124,7 +124,7 @@ let IndexView () =
                 Html.classed Html.h1 "text-4xl font-semibold leading-none mb-4 sm:text-7xl md:text-8xl" [ Html.text "IT podcast, který rozhodně neplave po povrchu." ]
                 Html.divClassed "text-xl leading-tight mb-12 sm:text-2xl md:text-3xl" [
                     Html.text "Zajímaví hosté v hodinovém pořadu vysílaném "
-                    Html.a [ prop.className "text-blue-800 hover:underline"; prop.href "https://twitter.com/podvocasem"; prop.text "#PodVocasem" ]
+                    Html.a [ prop.className "text-blue-800 hover:underline"; prop.href "https://bsky.app/profile/podvocasem.cz"; prop.text "#PodVocasem" ]
                 ]
                 Html.divClassed "mb-2 text-lg md:text-xl" [ Html.text "Poslouchej nás na své oblíbené platformě:" ]
                 Html.divClassed "sm:flex items-center" [
@@ -168,7 +168,7 @@ let IndexView () =
                     ]
                     Html.p [
                         Html.text "Roman \"Džoukr\" Provazník a Petr \"Poli\" Polák v novém IT podcastu, který rozhodně neplave po povrchu. Zajímaví hosté a neotřelá témata do hloubky v hodinovém pořadu vysílaném přímo "
-                        Html.a [ prop.className "text-blue-800 hover:underline"; prop.href "https://twitter.com/podvocasem"; prop.text "#PodVocasem" ]
+                        Html.a [ prop.className "text-blue-800 hover:underline"; prop.href "https://bsky.app/profile/podvocasem.cz"; prop.text "#PodVocasem" ]
                         Html.text "!"
                     ]
                 ]
@@ -187,9 +187,9 @@ let IndexView () =
                             prop.children [ Html.img [ prop.className "mx-2 h-8 w-8"; prop.src "/svg/apple-podcast-bw.svg" ] ]
                         ]
                         Html.a [
-                            prop.href "https://twitter.com/podvocasem"
+                            prop.href "https://bsky.app/profile/podvocasem.cz"
                             prop.className "hover:text-gray-200"
-                            prop.children [ Html.img [ prop.className "mx-2 h-6 w-6 invert"; prop.src "/svg/twitter.svg" ] ]
+                            prop.children [ Html.img [ prop.className "mx-2 h-6 w-6 invert"; prop.src "/svg/bluesky.svg" ] ]
                         ]
                     ]
                     Html.divClassed "mt-8 md:mt-0 md:order-1" [
