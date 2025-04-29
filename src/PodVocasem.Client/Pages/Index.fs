@@ -88,16 +88,16 @@ let playBox (e:Episode) =
 
 let partnerBox (logo:string) (desc:string) (linkHref:string) (linkName:string) =
     Html.divClassed "py-8 sm:py-16 px-8 md:px-16 lg:px-32 text-center text-gray-700" [
-        Html.divClassed "text-2xl font-semibold" [ Html.text "Partnerem této série je" ]
+        Html.divClassed "text-2xl font-semibold mb-4" [ Html.text "Partnerem této série je" ]
         Html.a [
             prop.href linkHref
             prop.children [
-                Html.img [ prop.src logo; prop.className "mx-auto w-64" ]
+                Html.img [ prop.src logo; prop.className "mx-auto w-64 lg:w-96" ]
             ]
         ]
-        Html.divClassed "mx-auto w-96 text-lg" [ Html.text desc ]
+        Html.divClassed "mx-auto w-64 lg:w-96 text-lg mt-4" [ Html.text desc ]
 
-        Html.divClassed "mx-auto w-96 mt-2 underline text-lg font-medium" [
+        Html.divClassed "mx-auto w-64 lg:w-96 mt-2 underline text-lg font-medium" [
             Html.a [
                 prop.href linkHref
                 prop.text linkName
@@ -134,7 +134,7 @@ let IndexView () =
             ]
         ]
 
-        partnerBox "/img/partners/vivio.png" "PŘINÁŠÍME ŽIVOT DO VAŠÍ ONLINE REKLAMY. Pomůžeme vám s PPC kampaněmi i celkovou marketingovou strategií." "https://www.vivio.cz/" "www.vivio.cz"
+        partnerBox "/img/partners/sporice.svg" "" "https://www.csas.cz/" "www.csas.cz"
 
         Html.divClassed "flex-grow max-w-full" [
             Html.classed Html.main "block py-12" [
