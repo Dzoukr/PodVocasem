@@ -194,17 +194,6 @@ let IndexView () =
                     ]
                     Html.divClassed "mt-8 md:mt-0 md:order-1" [
                         Html.classed Html.p "text-center md:flex md:items-center text-base leading-6 text-gray-100" [
-                            Html.text "Supported by "
-                            Html.a [
-                                prop.className "mx-auto mt-2 md:mt-0 md:ml-2"
-                                prop.href "https://www.ciklum.com/we"
-                                prop.children [
-                                    Html.img [
-                                        prop.src "/svg/ciklum-logo.svg"
-                                        prop.className "mx-auto mt-2 md:mt-0 md:ml-2 h-10"
-                                    ]
-                                ]
-                            ]
                         ]
                     ]
                 ]
