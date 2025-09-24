@@ -111,7 +111,7 @@ let liveBannerBox =
             prop.children [
                 Html.img [ prop.className "border border-gray-200"; prop.src "/img/live-banner.gif" ]
             ]
-            prop.href "https://forms.gle/wMfL6V3y74WqvEzn8"
+            prop.href "https://www.podvocasem.cz/live"
         ]
     ]
 
