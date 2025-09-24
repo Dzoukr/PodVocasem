@@ -105,6 +105,16 @@ let partnerBox (logo:string) (desc:string) (linkHref:string) (linkName:string) =
         ]
     ]
 
+let liveBannerBox =
+    Html.divClassed "flex flex-col items-center mt-24 mb-12" [
+        Html.a [
+            prop.children [
+                Html.img [ prop.className "border border-gray-200"; prop.src "/img/live-banner.gif" ]
+            ]
+            prop.href "https://forms.gle/wMfL6V3y74WqvEzn8"
+        ]
+    ]
+
 [<ReactComponent>]
 let IndexView () =
     let state, dispatch = React.useElmish(init, update, [| |])
@@ -134,6 +144,7 @@ let IndexView () =
             ]
         ]
 
+        liveBannerBox
         partnerBox "/img/partners/sporice.svg" "" "https://www.csas.cz/" "www.csas.cz"
 
         Html.divClassed "flex-grow max-w-full" [
