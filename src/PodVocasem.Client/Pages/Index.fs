@@ -141,7 +141,7 @@ let IndexView () =
                 Html.classed Html.h1 "text-4xl font-semibold leading-none mb-4 sm:text-7xl md:text-8xl" [ Html.text "IT podcast, který rozhodně neplave po povrchu." ]
                 Html.divClassed "text-xl leading-tight mb-12 sm:text-2xl md:text-3xl" [
                     Html.text "Zajímaví hosté v hodinovém pořadu vysílaném "
-                    Html.a [ prop.className "text-blue-800 hover:underline"; prop.href "https://bsky.app/profile/podvocasem.cz"; prop.text "#PodVocasem" ]
+                    Html.a [ prop.className "text-blue-800 hover:underline"; prop.href "https://herohero.co/podvocasem"; prop.text "#PodVocasem" ]
                 ]
 
                 Html.divClassed "flex flex-col gap-8" [
@@ -212,7 +212,7 @@ let IndexView () =
                     ]
                     Html.p [
                         Html.text "Roman \"Džoukr\" Provazník a Petr \"Poli\" Polák v novém IT podcastu, který rozhodně neplave po povrchu. Zajímaví hosté a neotřelá témata do hloubky v hodinovém pořadu vysílaném přímo "
-                        Html.a [ prop.className "text-blue-800 hover:underline"; prop.href "https://bsky.app/profile/podvocasem.cz"; prop.text "#PodVocasem" ]
+                        Html.a [ prop.className "text-blue-800 hover:underline"; prop.href "https://herohero.co/podvocasem"; prop.text "#PodVocasem" ]
                         Html.text "!"
                     ]
                 ]
