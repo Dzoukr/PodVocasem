@@ -65,6 +65,7 @@ let fullBtn link (logo:string) (name:string) =
             Html.divClassed "w-40" [
                 Html.img [
                     prop.src $"/img/{logo}.png"
+                    prop.className "rounded-md"
                 ]
             ]
             Html.divClassed "mt-1 text-blue-800 hover:underline" [
