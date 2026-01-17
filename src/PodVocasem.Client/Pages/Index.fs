@@ -57,6 +57,22 @@ let podcastBtn link (svg:string) (name:string) =
         ]
     ]
 
+let fullBtn link (logo:string) (name:string) =
+    Html.a [
+        prop.className $""
+        prop.href link
+        prop.children [
+            Html.divClassed "w-40" [
+                Html.img [
+                    prop.src $"/img/{logo}.png"
+                ]
+            ]
+            Html.divClassed "mt-1 text-blue-800 hover:underline" [
+                Html.text name
+            ]
+        ]
+    ]
+
 let mcs : string = importDefault "../assets/img/mcs.jpg"
 let loader : string = importDefault "../assets/img/loader.png"
 
@@ -126,11 +142,38 @@ let IndexView () =
                     Html.text "Zajímaví hosté v hodinovém pořadu vysílaném "
                     Html.a [ prop.className "text-blue-800 hover:underline"; prop.href "https://bsky.app/profile/podvocasem.cz"; prop.text "#PodVocasem" ]
                 ]
-                Html.divClassed "mb-2 text-lg md:text-xl" [ Html.text "Poslouchej nás na své oblíbené platformě:" ]
-                Html.divClassed "sm:flex items-center" [
-                    podcastBtn "https://open.spotify.com/show/280aceAx85AKZslVytXsrB?si=50b87e50890746b7" "spotify" "Spotify"
-                    podcastBtn "https://podcasts.apple.com/us/podcast/podvocasem/id1590431276" "apple-podcast" "Apple Podcasts"
+
+                Html.divClassed "flex flex-col gap-8" [
+                    Html.div [
+                        Html.divClassed "mb-2 text-lg md:text-xl" [ Html.text "Poslouchej nás na své oblíbené platformě:" ]
+                        Html.divClassed "sm:flex items-center" [
+                            podcastBtn "https://open.spotify.com/show/280aceAx85AKZslVytXsrB?si=50b87e50890746b7" "spotify" "Spotify"
+                            podcastBtn "https://podcasts.apple.com/us/podcast/podvocasem/id1590431276" "apple-podcast" "Apple Podcasts"
+                        ]
+                    ]
+                    Html.div [
+                        Html.divClassed "mb-2 text-lg md:text-xl" [ Html.text "Podpoř naši tvorbu:" ]
+                        Html.divClassed "sm:flex items-center" [
+                            fullBtn "https://herohero.co/podvocasem" "herohero" "herohero.co/podvocasem"
+                        ]
+                    ]
+                    Html.div [
+                        Html.divClassed "mb-2 text-lg md:text-xl" [ Html.text "Napiš nám do studia:" ]
+                        Html.divClassed "flex flex-col" [
+                            Html.a [ prop.href "mailto:dzoukr@dzoukr.cz"; prop.children [
+                                Html.text "📧 Roman \"Džoukr\" Provazník - "
+                                Html.span [ prop.className "text-blue-800 hover:underline"; prop.text "dzoukr@dzoukr.cz"]
+                            ] ]
+                            Html.a [ prop.href "mailto:petr@polakzceska.cz"; prop.children [
+                                Html.text "📧 Petr \"Poli\" Polák - "
+                                Html.span [ prop.className "text-blue-800 hover:underline"; prop.text "petr@polakzceska.cz"]
+                            ] ]
+
+                        ]
+                    ]
+
                 ]
+
             ]
         ]
 
