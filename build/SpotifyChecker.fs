@@ -19,9 +19,13 @@ type Episode = {
 module Episode =
     let ofSimpleEpisode (e:SimpleEpisode) =
         let nums = e.Name.Split("-").[0]
-        let seas = (string nums.[1] + string nums.[2]) |> int
+        let seas = (string nums.[1] + string nums.[2])
+        let seasNum =
+            match System.Int32.TryParse(seas) with
+            | true, s -> s
+            | _ -> 0
         {
-            Season = seas
+            Season = seasNum
             Name = e.Name
             Description = e.Description
             SpotifyHash = e.Id

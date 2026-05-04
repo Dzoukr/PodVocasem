@@ -188,6 +188,18 @@ let IndexView () =
                         Html.img [ prop.src loader; prop.className "animate-spin" ]
                     ]
                 else
+                    Html.classed Html.article "px-8 md:px-16 lg:px-32 pb-12 lg:pb-16" [
+                        Html.classed Html.h1 "text-gray-700" [ Html.text $"⭐ BonusOFFky pro podporovatele" ]
+                        Html.divClassed "relative" [
+                            Html.divClassed "relative mx-auto" [
+                                Html.divClassed "grid gap-8 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none" [
+                                    for e in (state.Episodes |> List.filter (fun x -> x.Season = 0)) do
+                                        yield playBox e
+                                ]
+                            ]
+                        ]
+                    ]
+
                     for s in ([1..maxSerie] |> List.rev) do
                         Html.classed Html.article "px-8 md:px-16 lg:px-32 pb-12 lg:pb-16" [
                             Html.classed Html.h1 "text-gray-700" [ Html.text $"PodVocasem - {s}. série" ]
