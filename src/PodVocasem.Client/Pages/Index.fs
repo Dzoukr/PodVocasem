@@ -248,9 +248,11 @@ let IndexView () =
                             prop.children [ Html.img [ prop.className "mx-2 h-6 w-6 invert"; prop.src "/svg/bluesky.svg" ] ]
                         ]
                     ]
-                    Html.divClassed "mt-8 md:mt-0 md:order-1" [
-                        Html.classed Html.p "text-center md:flex md:items-center text-base leading-6 text-gray-100" [
-                        ]
+                    Html.divClassed "mt-8 md:mt-0 md:order-1 text-center md:text-left text-sm leading-6 text-gray-400" [
+                        Html.classed Html.p "font-semibold text-gray-100" [ Html.text "PodVocasem s.r.o." ]
+                        Html.div [ Html.text "Vrchlického 3318, Kročehlavy, 272 01 Kladno" ]
+                        Html.div [ Html.text "IČO: 29670039" ]
+                        Html.div [ Html.text "Zapsáno v obchodním rejstříku vedeném Městským soudem v Praze, oddíl C, vložka 449427." ]
                     ]
                 ]
             ]
