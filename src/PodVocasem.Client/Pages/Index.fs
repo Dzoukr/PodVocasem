@@ -103,22 +103,27 @@ let playBox (e:Episode) =
         ]
     ]
 
-let partnerBox (logo:string) (desc:string) (linkHref:string) (linkName:string) =
+let partnerBox (partners:(string * string * string) list) =
     Html.divClassed "py-8 sm:py-16 px-8 md:px-16 lg:px-32 text-center text-gray-700" [
-        Html.divClassed "text-2xl font-semibold mb-4" [ Html.text "Partnerem této série je" ]
-        Html.a [
-            prop.href linkHref
-            prop.children [
-                Html.img [ prop.src logo; prop.className "mx-auto w-64 lg:w-96" ]
-            ]
+        Html.divClassed "text-2xl font-semibold mb-4" [
+            Html.text (if partners.Length > 1 then "Partnery této série jsou" else "Partnerem této série je")
         ]
-        Html.divClassed "mx-auto w-64 lg:w-96 text-lg mt-4" [ Html.text desc ]
-
-        Html.divClassed "mx-auto w-64 lg:w-96 mt-2 underline text-lg font-medium" [
-            Html.a [
-                prop.href linkHref
-                prop.text linkName
-            ]
+        Html.divClassed "flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-8 sm:gap-12" [
+            for (logo, linkHref, linkName) in partners do
+                Html.divClassed "flex flex-col items-center" [
+                    Html.a [
+                        prop.href linkHref
+                        prop.children [
+                            Html.img [ prop.src logo; prop.className "w-64 lg:w-80" ]
+                        ]
+                    ]
+                    Html.divClassed "mt-2 underline text-lg font-medium" [
+                        Html.a [
+                            prop.href linkHref
+                            prop.text linkName
+                        ]
+                    ]
+                ]
         ]
     ]
 
@@ -178,7 +183,10 @@ let IndexView () =
             ]
         ]
 
-        partnerBox "/img/partners/sporice.svg" "" "https://www.csas.cz/" "www.csas.cz"
+        partnerBox [
+            "/img/partners/sporice.svg", "https://www.csas.cz/", "www.csas.cz"
+            "/img/partners/second_foundation.png", "https://www.second-foundation.eu/", "www.second-foundation.eu"
+        ]
 
         Html.divClassed "flex-grow max-w-full" [
             Html.classed Html.main "block py-12" [
