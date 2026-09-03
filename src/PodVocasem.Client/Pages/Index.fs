@@ -151,10 +151,11 @@ let IndexView () =
 
                 Html.divClassed "flex flex-col gap-8" [
                     Html.div [
-                        Html.divClassed "mb-2 text-lg md:text-xl" [ Html.text "Poslouchej nás na své oblíbené platformě:" ]
-                        Html.divClassed "sm:flex items-center" [
+                        Html.divClassed "mb-2 text-lg md:text-xl" [ Html.text "Poslouchej a sleduj nás na své oblíbené platformě:" ]
+                        Html.divClassed "sm:flex sm:flex-wrap items-center" [
                             podcastBtn "https://open.spotify.com/show/280aceAx85AKZslVytXsrB?si=50b87e50890746b7" "spotify" "Spotify"
                             podcastBtn "https://podcasts.apple.com/us/podcast/podvocasem/id1590431276" "apple-podcast" "Apple Podcasts"
+                            podcastBtn "https://www.youtube.com/@podvocasem" "youtube" "YouTube"
                         ]
                     ]
                     Html.div [
@@ -249,6 +250,16 @@ let IndexView () =
                             prop.href "https://podcasts.apple.com/us/podcast/podvocasem/id1590431276"
                             prop.className "hover:text-gray-200"
                             prop.children [ Html.img [ prop.className "mx-2 h-8 w-8"; prop.src "/svg/apple-podcast-bw.svg" ] ]
+                        ]
+                        Html.a [
+                            prop.href "https://www.youtube.com/@podvocasem"
+                            prop.className "hover:text-gray-200"
+                            prop.children [ Html.img [ prop.className "mx-2 h-8 w-8"; prop.src "/svg/youtube-bw.svg" ] ]
+                        ]
+                        Html.a [
+                            prop.href "https://herohero.co/podvocasem"
+                            prop.className "hover:text-gray-200"
+                            prop.children [ Html.img [ prop.className "mx-2 h-8 w-8"; prop.src "/svg/herohero-bw.svg" ] ]
                         ]
                         Html.a [
                             prop.href "https://bsky.app/profile/podvocasem.cz"
