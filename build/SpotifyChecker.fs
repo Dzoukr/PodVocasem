@@ -2,6 +2,7 @@
 
 open System.Text.Json
 open System.IO
+open System.Text.RegularExpressions
 open SpotifyAPI.Web
 
 type SpotifyConfiguration = {
@@ -18,12 +19,8 @@ type Episode = {
 
 module Episode =
     let ofSimpleEpisode (e:SimpleEpisode) =
-        let nums = e.Name.Split("-").[0]
-        let seas = (string nums.[1] + string nums.[2])
-        let seasNum =
-            match System.Int32.TryParse(seas) with
-            | true, s -> s
-            | _ -> 0
+        let m = Regex.Match(e.Name, @"^\s*S(\d+)", RegexOptions.IgnoreCase)
+        let seasNum = if m.Success then int m.Groups.[1].Value else 0
         {
             Season = seasNum
             Name = e.Name
