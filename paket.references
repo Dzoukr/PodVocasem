@@ -1,5 +1,0 @@
-﻿group Build
-    Fake.Core.Target
-    Fake.DotNet.Cli
-    Fake.IO.FileSystem
-    SpotifyAPI.Web

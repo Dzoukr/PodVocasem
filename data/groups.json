@@ -1,0 +1,38 @@
+{
+  "groups": [
+    {
+      "id": "bonusoffka",
+      "prefix": "BonusOFFka",
+      "title": "BonusOFFky pro podporovatele",
+      "description": "Exkluzivní díly pro podporovatele na Herohero.",
+      "herohero": true,
+      "chip": {
+        "icon": "star",
+        "label": "Bonus"
+      }
+    },
+    {
+      "id": "changelog",
+      "prefix": "Changelog",
+      "title": "Changelog",
+      "description": "Džoukr s Polim probírají, co je zaujalo z novinek ve světě IT.",
+      "herohero": false,
+      "youtubePlaylist": "https://www.youtube.com/playlist?list=PLIPlLWq6fDjg",
+      "chip": {
+        "icon": "newspaper",
+        "label": "Changelog"
+      }
+    },
+    {
+      "id": "specials",
+      "fallback": true,
+      "title": "Speciály",
+      "description": "Díly mimo sérii.",
+      "herohero": false,
+      "chip": {
+        "icon": "sparkles",
+        "label": "Speciály"
+      }
+    }
+  ]
+}

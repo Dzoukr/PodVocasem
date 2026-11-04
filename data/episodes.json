@@ -1,0 +1,836 @@
+{
+  "episodes": [
+    {
+      "id": "1kWojOCOBvV1TnJ8x7QUfN",
+      "name": "Changelog #3",
+      "description": "Nový formát a nový způsob, jak vám přinášet zajímavé události ze světa IT. Džoukr s Polim se tentokrát sešli na dálku a probrali, co z novinek je zaujalo. Dejte si!\nAI agenti už staví většinu nových Spark Declarative Pipelines na Databricks - https://www.databricks.com/blog/built-agents-case-spark-declarative-pipelines\nBigQuery spojuje tabulková data s PDF, obrázky, audiem a videem do jednoho analytického světa - https://cloud.google.com/blog/products/data-analytics/analyze-unstructured-data-in-bigquery-with-objectref\nAI FinOps: Databricks popisuje, jak jim náklady na coding agenty začaly exponenciálně růst a jak je pomocí routingu, budgetů a levnějších modelů srazili až o 90 % - https://www.databricks.com/blog/ai-bill-coming\nKritická chyba v PHP: https://www.wiz.io/blog/php2shell-php-rce\nIncident v LiteLLM: https://docs.litellm.ai/blog/security-incident-oct-21-2026\nFalešné statistiky v LLMs: https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web\nMoatless: https://moatless.store/blog/announcing-moatless",
+      "releaseDate": "2026-10-28",
+      "durationMs": 2457344,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
+      "id": "3ixeL5e6hp00HhmcqF3WCb",
+      "name": "S16E05 - Jaroslav Rychna - Bankovní core systémy a integrace",
+      "description": "V předposledním díle 16. série jsme si do studia pozvali Head of Engineering České spořitelny Jardu Rychnu, se kterým jsme probrali specifika bankovních core systémů, integrací, a též nemohlo chybět ani horké téma AI ve vývoji.",
+      "releaseDate": "2026-10-26",
+      "durationMs": 2824085,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
+      "id": "0pf7esrkO3spT9TgYzXoOr",
+      "name": "Changelog #2",
+      "description": "Nový formát a nový způsob, jak vám přinášet zajímavé události ze světa IT. Džoukr s Polim se tentokrát sešli na dálku a probrali, co z novinek je zaujalo. Dejte si!\nOSS verze Adobe nástrojů - https://getartcraft.com/apps\nČeská verze Outlooku - https://www.fastmailer.one/\nJak napsat dobrý MPC server - https://refactoring.fm/p/how-to-design-a-good-mcp-server\nDoom portovaný do SQL - https://cedardb.com/blog/sqldoom/\n80’s hit napsaný v JavaScriptu - https://dittytoy.net/ditty/2dd99fc839\nGoogle pouští BigQuery & spol. do jakéhokoliv coding agenta - https://cloud.google.com/blog/topics/developers-practitioners/data-agent-kit-is-now-ga-bring-google-data-cloud-to-any-coding-agent\nCohere nakupuje AI security - https://www.investing.com/news/stock-market-news/cohere-moves-to-buy-ai-cybersecuritystartup-aisle-4950863\nPostgres zrcadlený rovnou do Snowflake - https://docs.snowflake.com/en/user-guide/snowflake-postgres/postgres-data-mirroring",
+      "releaseDate": "2026-10-16",
+      "durationMs": 2412352,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
+      "id": "5XMA1CBzECxiELdqxHeuWZ",
+      "name": "S16E04 - Tomáš Látal - AT Protocol a decentralizované sociální sítě",
+      "description": "V druhé polovině šestnácté série si dáme pořádně hluboký deepdive do AT Protocolu a toho, jak fungují decentralizované sociální sítě. Pokud máte účet na Bluesky, Tomáš Látal vám vysvětlí, co se děje na pozadí a jak si na tomto základu postavit vlastní aplikaci.",
+      "releaseDate": "2026-10-12",
+      "durationMs": 2526848,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
+      "id": "1e36Lxk72mUM5LWZPBrHar",
+      "name": "Changelog #1",
+      "description": "Nový formát a nový způsob, jak vám přinášet zajímavé události ze světa IT. Džoukr s Polim se tentokrát sešli na dálku a probrali, co z novinek je zaujalo. Dejte si!\nJak fungují LLM - https://poloclub.github.io/transformer-explainer/\nWorse is Better - https://blog.ploeh.dk/2026/06/29/worse-is-better/\nJev - https://typesafe.ai/blog/introducing-system-one-models-and-jev\nAI ničí soudní systém - https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition\nUnicef a nepřesnost výsledků LLM - https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents\nMews layoffs - https://skift.com/2026/07/07/mews-layoffs-restructuring-ai/\nOracle layoffs - https://www.businessinsider.com/oracle-begins-new-round-of-layoffs-2026-9\nMeta hlásí návrat manažerů - https://www.inc.com/marcel-schwantes/mark-zuckerberg-meta-flat-management-managers-return-leadership/91404830\nData Agent - https://openai.com/index/put-data-to-work/",
+      "releaseDate": "2026-10-02",
+      "durationMs": 2674304,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
+      "id": "02qboZp8Z5Pk7VY3Zr3uXX",
+      "name": "S16E03 - Michal Zeman - Python a Data Intelligence v Algo Tradingu",
+      "description": "Dlouho se nám téma Algo Tradingu vyhýbalo, ale naštěstí se na nás usmálo štěstí a do studia dorazil fantastický Michal Zeman, se kterým jsme tuhle oblast probrali. Nechyběla technická šťávička, Python, data a taky pár vtipných historek o tom, že nejlépe se deployuje po třech pivech z teambuldingu.",
+      "releaseDate": "2026-09-28",
+      "durationMs": 3146709,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
+      "id": "6LbTnRae2gdgNIGMgquC69",
+      "name": "S16E02 - Jiří Vicherek - SaaSocalypsa a české startupy",
+      "description": "Do studia zavítal fantastický Jirka Vicherek - předseda České startupové asociace a člověk, který se kolem startupů pohybuje už nějakou dobu. Společně jsme probrali aktuální bolesti i příležitosti českých startupů a samozřejmě i probrali praktické rady, jak v roce 2026 vykopnout vlastní startup. Další skvělej host a další skvělej díl!",
+      "releaseDate": "2026-09-14",
+      "durationMs": 3386474,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
+      "id": "0iZcNfd1jfbAYCVvVrDBGm",
+      "name": "S16E01 - Jiří Raška - Stavba banky v pěti lidech",
+      "description": "Vykopáváme novou sérii a jsme moc rádi, že pozvání do studia přijal CTO a spoluzakladatel Partners Banky Jiří Raška, se kterým jsme probrali nejen klasickou technickou šťávičku a využití AI ve vývoji, ale též jsme se pobavili o tom, jak se vlastně člověk dostane k tomu, že založí banku. Zajímavý příběh a ještě zajímavější pokec #PodVocasem!",
+      "releaseDate": "2026-08-31",
+      "durationMs": 2737258,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
+      "id": "43hCGZdqKNKchwWWbSrH1Q",
+      "name": "Sbohem...?",
+      "description": "Někdo říká, že jsme to měli udělat už dávno. Někdo si možná řekne, že je to blbost. Každopádně je tu nový a velmi netradiční díl podcastu, kde se budeme loučit...",
+      "releaseDate": "2026-08-14",
+      "durationMs": 1716970,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
+      "id": "49jWCnaua49RkajMI6yKyu",
+      "name": "BonusOFFka #3 - AI v SW vývoji a datech",
+      "description": "Dlouho slibovaný díl zaměřený na AI je tady! Jak používáme AI dnes, jaké byly naše začátky, jaké tooly jsou pro nás must have a jak se celkově změnil svět vývoje software a dat? Dejte si hoďku a půl \"éjáj šťávičky\", pouze a jenom pro vás - naše milované podporovatele!",
+      "releaseDate": "2026-07-27",
+      "durationMs": 104080,
+      "image": "https://i.scdn.co/image/ab67656300005f1f07fa69b5072bb45822603fa6"
+    },
+    {
+      "id": "2dFvqvUR8YgtsmdLd64lBa",
+      "name": "S15E06 - Matouš Havlena - IBM Research, agentic AI a robotika",
+      "description": "Patnáctou sérii zakončujeme fantastickým pokecem s Matoušem Havlenou ze společnosti Apoco, který nám povyprávěl o své cestě z IBM Research až k vlastní firmě zaměřené na chytrá řešení, agentic AI, robotiku a R&D. Pokud se zajímáte o harnesses, security, prompting, izolaci agentů v cloudu a podobné dobrůtky, tak si #PodVocasem opět přijdete na své.",
+      "releaseDate": "2026-07-20",
+      "durationMs": 4978774,
+      "image": "https://i.scdn.co/image/ab67656300005f1fe52f2bb68ed3c495d97abf99"
+    },
+    {
+      "id": "5rZud3paI93m5JjlQNmTZ3",
+      "name": "S15E05 - Alois Holub a Milan Lempera - O Commity.cz a AI Monday",
+      "description": "Už jsme dlouho neměli #PodVocasem dva hosty, a tak jsme byli o to víc rádi, že do studia dorazila dvojka z jihlavské firmy Commity.cz Alois Holum a Milan Lempera, se kterými jsme se pobavili o budování komunit, využití AI a o nástrahách podnikání z malého města. Co bude, až nebude token, jak reagovat na AI pricing a jak se to celé vyvine? Možná se dozvíte v následujících 90 minutách.",
+      "releaseDate": "2026-07-06",
+      "durationMs": 5483421,
+      "image": "https://i.scdn.co/image/ab67656300005f1f47157eb3236d11b83635a869"
+    },
+    {
+      "id": "0vDihTK64Nga3fxMNZ6pfq",
+      "name": "S15E04 - Irena Zatloukalová - O vývojářích na spektru a startupu Diversight",
+      "description": "Další strasně silnej díl a tentokrát na ještě silnější téma. Do studia dorazila zakladatelka startupu Diversight Irča Zatloukalová a společně jsme probrali, jaká jsou specifika práce s lidmi na spektru a jak se k tomu staví její nový startup, který na silných stránkách autismu buduje unikátní službu pro validaci dat pro AI modely.",
+      "releaseDate": "2026-06-22",
+      "durationMs": 5078097,
+      "image": "https://i.scdn.co/image/ab67656300005f1feb915bdc8685656558edd14e"
+    },
+    {
+      "id": "5BhkYENNfHf1yMtjV7ZDt7",
+      "name": "BonusOFFka #2 - Horror stories o firemní kultuře",
+      "description": "Pokračujeme v otevírání skříní s kostlivci a dneska budeme opět sypat sůl do živých ran, když se podíváme na zoubek firemní kultuře. K tomu přidáme naše zkušenosti s akvizicemi, Roman vysvětlí svůj love-hate vztah ke slovu \"leadership\" a vysvětlíme si, co má Strýček Jedlička společného s korporátní firemní kulturou. Pokud procházíte akvizicí a právě se vám začaly ztrácet vaše oblíbené Slack emoji, je tohle díl speciálně pro vás!",
+      "releaseDate": "2026-06-08",
+      "durationMs": 144786,
+      "image": "https://i.scdn.co/image/ab67656300005f1f4a1bb8af968e4975ab1eeb79"
+    },
+    {
+      "id": "1vRXXOVNuiDrF4AItRlKtk",
+      "name": "S15E03 - Jana Kůrková - Od archeologie k Service Ownershipu",
+      "description": "V půlce 15. série jsme opět zabrousili na půdu našeho partnera České \"Spořice\" Spořitelny, kde jsme vyzpovídali skvělou Janu Kůrkovou, toho času Service Ownerku právě ve Spořici. Její životní cesta zahrnuje mnoho zajímavých štací včetně archeologie a spravování webu pro dospělé, tudíž jsme ji museli vyzpovídat a zmapovat její velmi unikátní cestu do IT. A mimo jiné jsme trhli rekord v délce úvodu, za což se samozřejmě omlouváme.",
+      "releaseDate": "2026-06-01",
+      "durationMs": 4918969,
+      "image": "https://i.scdn.co/image/ab67656300005f1f57552d46fd47da0a019a07a7"
+    },
+    {
+      "id": "5mAO6V1WEzDAueJ7zv8gxm",
+      "name": "S15E02 - Marek Jalovec - Od MMORPG hostingu ke kontextové reklamě v AI chatbotech",
+      "description": "Popsat díl s Markem Jalovcem je trošku oříšek. Marek je totiž až renesanční člověk a kromě toho, že má piloťák, kapitánský průkaz a hotovou rekvalifikaci na sportovního maséra, též umí zazářit na IT scéně. A tak si prošel velmi zajímavou cestou od hostování MMORPG přes Citrix až k vlastnímu startupu zaměřenému na kontextovou reklamu v AI chatbotech. Nejen o tom nám vyprávěl v dalším díle podcastu #PodVocasem.",
+      "releaseDate": "2026-05-18",
+      "durationMs": 4862950,
+      "image": "https://i.scdn.co/image/ab67656300005f1f03df1390f1f3e87599a9013d"
+    },
+    {
+      "id": "6OvGOpkZOW8gLMcHZIjAOz",
+      "name": "S15E01 - Tomáš Nováčik - Demo scéna, programování dispečinku a vyhazovy z práce",
+      "description": "Startujeme 15. sérii a hned do toho šlapeme z vostra. Do studia přišel skvělý Tomáš Nováčik z Garwanu, se kterým jsme zavzpomínali na dřevní doby Demo scény na Slovensku, probrali jsme jeho šílené eskapády při programování software pro monitoring vozidel a pokecali bez obalu, jaké to je nechat se dvakrát vyhodit z práce.",
+      "releaseDate": "2026-05-04",
+      "durationMs": 4682851,
+      "image": "https://i.scdn.co/image/ab67656300005f1f3e6622f118cd0118815e823e"
+    },
+    {
+      "id": "1vmZCjHM9LY4euwvvwu3ZP",
+      "name": "BonusOFFka #1 - Naše startup fails",
+      "description": "Psali jste si o to a tady to máte! Sedli jsme si do studia jen my dva a otevřeli skříně narvané kostlivci z naší startupové éry. Co nám (ne)vyšlo, jaké chyby jsme (ne)udělali a jak jsme se z toho (ne)poučili - dozvíte se v hodině a půl velmi osobního povídání.",
+      "releaseDate": "2026-04-13",
+      "durationMs": 185369,
+      "image": "https://i.scdn.co/image/ab67656300005f1f8823063c19260972acfa2b03"
+    },
+    {
+      "id": "67BOX9ac6dlO1Ej8g4xsJQ",
+      "name": "S14E06 - Jakub Šimek - GIS, laser scanning a IT v geodézii",
+      "description": "Byť je to šokující, stále existuje téma, které jsme za ty roky v #PodVocasem neprobrali, a to je GIS a IT v geodézii. Naštěstí se nám ozval Jakub Šimek, který nejen že tomuhle všemu rozumí, ale navíc je náš stálý posluchač, a tak jsme kromě GIS, GPS, LiDARu a dalších 10 000 věcí probrali též naše nepřesnosti o nepřesnosti v GPS. Chcete-li s námi nakouknout do světa, který normálně neznáte, dejte si poslední díl 14. série.",
+      "releaseDate": "2026-03-30",
+      "durationMs": 5157107,
+      "image": "https://i.scdn.co/image/ab67656300005f1f6a59f8adfdefa8ab0e4d0196"
+    },
+    {
+      "id": "6vkQsOONoYMPKk4WXrQndM",
+      "name": "S14E05 - Tomáš Jurásek - Event-driven systémy, ADRka a Architecture governance",
+      "description": "Po delší době jsme opět zabrousili do světa commandů, eventů, event-driven systémů, ADRek a jiných dobrůtek. Do studia dorazil skvělý Tomáš Jurásek, který to nejen školí, ale dokonce tomu fakt rozumí, a tak jsme to probrali pěkně horem spodem. Dejte si další skvělý díl plný deepdivu!",
+      "releaseDate": "2026-03-16",
+      "durationMs": 4840890,
+      "image": "https://i.scdn.co/image/ab67656300005f1f94e9da4f903f32c4537e445e"
+    },
+    {
+      "id": "6kRfKDkygl6uD4qBQo4dIP",
+      "name": "S14E04 - Tomáš Trnka - OBT, Keboola a 30 miliard tokenů za měsíc v Carvagu (EAG)",
+      "description": "Proč je SQL stále nejlepší dotazovací jazyk, na co se hodí mít Keboolu a za co v Carvagu spálili jen za leden 30 miliard tokenů? Nejen o tom jsme si #PodVocasem povídali s Tomášem Trnkou - CDO firmy EAG. Máte-li rádi auta a data, pak je tohle díl, který si nesmíte nechat ujít!",
+      "releaseDate": "2026-03-02",
+      "durationMs": 5676297,
+      "image": "https://i.scdn.co/image/ab67656300005f1fe73b96d2ad9941c174a48a47"
+    },
+    {
+      "id": "00CVLcR5OgASZiPa7OaEvj",
+      "name": "S14E03 - Denisa Faltová - Jak aplikovat AI ve firmách",
+      "description": "Pozvání do studia přijala naše kamarádka a odbornice na aplikaci a využití AI ve firmách Denisa Faltová, se kterou jsme to vzali klasicky od podlahy a kromě tradičních AI-based témat jsme zabrousili i do etiky, školství a jiných odvětví. Pokud přemýšlíte, jak vlastně celý trend uchopit a aplikovat ve vaší firmě, bude tento díl další pošušňání pro vás!",
+      "releaseDate": "2026-02-16",
+      "durationMs": 4401253,
+      "image": "https://i.scdn.co/image/ab67656300005f1ff16c15f812ae831dc868fe52"
+    },
+    {
+      "id": "5ee3ZTKNWJhbjDgZGUri3e",
+      "name": "S14E02 - Martin Michálek - Rychlost webů",
+      "description": "Máte rychlý web? A mohla bych ho vidět? :) Do studia #PodVocasem dorazil odborník na rychlost webů a mimochodem neuvěřitelný sympaťák Martin Michálek, který nás uvedl do problematiky měření rychlosti webů, metrix a též vysvětlil, jak předcházet problémům při používání Reactu a Next.js. Další hoďka a půl nabušeného povídání - dejte si!",
+      "releaseDate": "2026-02-02",
+      "durationMs": 5011790,
+      "image": "https://i.scdn.co/image/ab67656300005f1f6fe6ac02c62aa935f74b0587"
+    },
+    {
+      "id": "58iFkjFm6jxI6n8xPTHlPn",
+      "name": "S14E01 - Martin Vágner - Custom vývoj v Salesforce",
+      "description": "Vítejte v roce 2026 a vítejte v nové sérii - letos pro vás máme spoustu novinek! Čtrnáctou sérii vykopáváme povídáním o platformě Salesforce a o tom, co všechno s ní lze provádět a jak ji customizovat. A protože máme rádi příklady z praxe v opravdu velkých firmách, naše pozvání přijal Martin Vágner z České Spořitelny, se kterým jsme se tomu podívali na zoubek.",
+      "releaseDate": "2026-01-19",
+      "durationMs": 5107387,
+      "image": "https://i.scdn.co/image/ab67656300005f1f8db102d6c7920c503a5e2b12"
+    },
+    {
+      "id": "67o1nu6KCgITnSpMA0LARV",
+      "name": "S13E06 - Jiří Kosek - O legendární PHP knize a XML",
+      "description": "Poslední díl roku 2025 se vrací o více než 20 let zpátky a my si společně s autorem legendární knihy o PHP3 Jirkou Koskem zavzpomínáme na doby, kdy většina z nás objevovala krásy webu a hltala všemi doušky právě Jirkovu knížku. Kromě boomerského vzpomínání nesmí chybět ani pohled do současnosti, deep dive do zákoutí XML a nebo třeba pokec o tom, jaké to je být součástí W3C konsorcia.",
+      "releaseDate": "2025-12-01",
+      "durationMs": 5779641,
+      "image": "https://i.scdn.co/image/ab67656300005f1f721d2daa7e2e6d30c3774235"
+    },
+    {
+      "id": "6ZY6mueH2hdK3XUMD7gJOp",
+      "name": "S13E05 - Karel Svrček - Do nitra AI v aplikaci George",
+      "description": "Ještě než uzavřeme šťastnou 13. sérii, pozvali jsme si do studia skvělého Karla Svrčka z České Spořitelny, se kterým jsme probrali vývoj AI v aplikaci George a velkolepé plány do budoucna s jejím využití napříč celou firmou. Nevynechali jsme ani oblíbenou technickou šťávičku, takže se například dozvíte, jak se vlastně definuje a ukládá \"myšlenka.\"",
+      "releaseDate": "2025-11-17",
+      "durationMs": 5541246,
+      "image": "https://i.scdn.co/image/ab67656300005f1fbfada937191d8da189c9f9bb"
+    },
+    {
+      "id": "0bEnxoHEMKDbE7uLbXl8YO",
+      "name": "S13E04 - Honza Jaroměřský - Z třinecké extraligy do IT",
+      "description": "Máme tu další příběh přestupu z vrcholu sportovní kariéry do světa IT. Do studia za námi přijel Honza Jaroměřský, dvojnásobný vítěz extraligy ledního hokeje a dnes již bývalý obránce Ocelářů z Třince, který po konci své hokejové kariéry vyměnil hokejové vybavení za laptop a začal se věnovat svému AI startupu pro individuální trénink mladých sportovců. Jaká byla jeho kariéra a co všechno se musel naučit, to se dozvíte v dalším díle podcastu #PodVocasem.",
+      "releaseDate": "2025-11-03",
+      "durationMs": 5503697,
+      "image": "https://i.scdn.co/image/ab67656300005f1f95cb1ce0e67ee5ba2de27433"
+    },
+    {
+      "id": "2osfFyu0pZLMglygFslF0t",
+      "name": "S13E03 - Vojta Barta - QA v roce 2025",
+      "description": "Protože myslíme na všechny své posluchače napříč IT spektrem, opět se vracíme k tématu QA, automatizace a hlídání kvality. Až z Ostravy za námi přijel zkušený \"kvalitář\" Vojta Barta, se kterým jsme nejen zavzpomínali na zlaté časy ve Vendavu, ale též probrali jeho více než osmnáctiletou kariéru v QA a jak se za tu dobu vnímání QA změnilo.",
+      "releaseDate": "2025-10-20",
+      "durationMs": 5342489,
+      "image": "https://i.scdn.co/image/ab67656300005f1f548c2833bafe3f317684bbfe"
+    },
+    {
+      "id": "6nkxObcnbTluAMTqzdzgAt",
+      "name": "S13E02 - Jindřich Skeldal - Brány Skeldalu, herní business a simulace herce ve VR",
+      "description": "Po delší době je tu opět ryze herní díl a my jsme měli tu čest ve studiu přivítat legendu české herní scény Jindřicha Skeldala, se kterým jsme se nejen vrátili do dřevních dob herního vývoje, ale též jsme probrali jeho nejnovější počiny jako Tribe Nation nebo simulátor herce ve VR. Samozřejmě nemohl chybět ani výhled do budoucnosti her v Čechách a spousta zajímavých myšlenek.",
+      "releaseDate": "2025-10-06",
+      "durationMs": 5333464,
+      "image": "https://i.scdn.co/image/ab67656300005f1f1e946f02f146acef3b77686c"
+    },
+    {
+      "id": "3MYJ3KU3RVuyov0o4sV8k4",
+      "name": "S13E01 - Honza Láznička - Data engineering v Billigence",
+      "description": "Jsme zpátky a v plné síle! Vykopáváme 13. sérii, opět se silným partnerem v zádech a opět se mrkneme na zoubek datařině. Dneska přišel Snowflake Hero Honza Láznička, který nás světem dat provedl a ještě nám pověděl něco o své velmi netradiční zálibě. Jo a taky jsme oznámili živák! Tak šup pouštět a komentovat!",
+      "releaseDate": "2025-09-22",
+      "durationMs": 5613336,
+      "image": "https://i.scdn.co/image/ab67656300005f1f9cff15c91f66a99ebbc01381"
+    },
+    {
+      "id": "1lyDS0I0ZQSHa8O0XUWxe0",
+      "name": "S12E06 - Tomáš Sušánka - Vývoj hardwarové peněženky v SatoshiLabs",
+      "description": "Dvanáctou sérii uzavírá CTO Trezor.io a velký nadšenec do kryptoměn Tomáš Sušánka, který s námi probral zákoutí vývoje hardwarové peněženky v SatoshiLabs a jaké aktuální bezpečnostní výzvy musí jeho tým řešit. Ať jste fanoušci Bitcoinu a kryptoměn obecně, nebo si jen chcete rozšířit obzory, poslední díl série podcastu #PodVocasem pro vás bude jako stvořený!",
+      "releaseDate": "2025-07-14",
+      "durationMs": 4800909,
+      "image": "https://i.scdn.co/image/ab67656300005f1f7f9f2c92288208e0cc05c701"
+    },
+    {
+      "id": "6jspAblGSmvLinyAVwKI16",
+      "name": "S12E05 - Víťa Hubený - Od kódu k businessu",
+      "description": "V předposledním díle dvanácté série za námi přišel skvělý Víťa Hubený z České Spořitelny, se kterým jsme mimo jiné probrali, proč by se programátoři měli odprostit od svého techstacku a zaměřit se víc na business. Zajímá vás, jak se v České Spořitelně aplikuje shift-left přístup a jaké to má výhody? Pak si dejte další hoďku a půl #PodVocasem.",
+      "releaseDate": "2025-06-30",
+      "durationMs": 5198857,
+      "image": "https://i.scdn.co/image/ab67656300005f1f99d379ddf1c0ab8ba5d5bfd2"
+    },
+    {
+      "id": "4Kx7QwOpeqXNYt0F0veu5W",
+      "name": "S12E04 - Jiří Dobrý a Daniel Pojhan - Když kód pomáhá",
+      "description": "Po dlouhé době jsme přivítali ve studiu dva hosty najednou. Jiří Dobrý a Daniel Pojhan přijeli z nedaleké Plzně, aby nám představili koncept hackathonů \"Když kód pomáhá\" a rozebrali s námi, jak může každý vývojář během jednoho víkendu výrazně pomoci lidem se zdravotním postižením. Co vznikne, když se spojí láska k technologiím s dobrým úmyslem? Dejte si v nejnovějším dílu podcastu #PodVocasem!",
+      "releaseDate": "2025-06-16",
+      "durationMs": 5263454,
+      "image": "https://i.scdn.co/image/ab67656300005f1fa8974c555c6625100bc6e799"
+    },
+    {
+      "id": "5XgIXe52p79iSAgCN0KVq5",
+      "name": "S12E03 - Aleš Holan - Od budovaní Shellu k budování startupů",
+      "description": "Jak se liší budování české pobočku Shellu v 90. letech od budování nových nadějných startupů dnes? Na co by měli foundeři myslet, co jim nejvíce chybí a jak poznat, kdy má cenu pokračovat? Na to všechno nám odpověděl \"dvorní dodavatel hostů\" našeho podcastu a Poliho starý známý Aleš Holan, který toho za život prošel více než dost a nebojí se sdílet své postřehy.",
+      "releaseDate": "2025-06-02",
+      "durationMs": 4671678,
+      "image": "https://i.scdn.co/image/ab67656300005f1f129f3431ead9a59c0fd237cc"
+    },
+    {
+      "id": "5JCDrce1uwhJwy6w5RKOZQ",
+      "name": "S12E02 - Matej Semančík - Kotlin multiplatform a vývoj na Androidu",
+      "description": "S blížícím se mDevCamp 2025 jsme si prostě museli sáhnout na jednoho ze speakerů a poptat se, co nového ve světe mobilního vývoje pro Android. Je pořád vývoj software pro mobilní zařízení bolestivý proces, nebo už se to za ty roky posunulo? A co s tím udělala rostoucí popularita jazyka Kotlin? Dejte si další díl vašeho oblíbeného IT podcastu.",
+      "releaseDate": "2025-05-19",
+      "durationMs": 4933759,
+      "image": "https://i.scdn.co/image/ab67656300005f1f275187d25e7beb5a9e48cc06"
+    },
+    {
+      "id": "12msfCbAR312H8XQxJMYqC",
+      "name": "S12E01 - Marcel Veselka - QA pomocí AI agentů ve Wopee.io",
+      "description": "Série číslo 12 startuje a konečně se vracíme k tématu, které jsme vykopli v první (!!!) sérii - a to QA a testování obecně. Do studia dorazil milovník kvality a chytrých řešení Marcel Veselka, se kterým jsme probrali využití AI při automatizovaném testování. Pokud vás zajímají autonomní testy, pak je tohle díl přímo pro vás!",
+      "releaseDate": "2025-05-05",
+      "durationMs": 5030804,
+      "image": "https://i.scdn.co/image/ab67656300005f1f200e6423131229bfc9116a0d"
+    },
+    {
+      "id": "4a0D0DAtlAv1yYXLzcbvhP",
+      "name": "S11E06 - Martin Šafránek - Data Vault",
+      "description": "Datovým dílem to začalo a datovým dílem také tuto sérií zakončíme. Do studia dorazil nabušený Martin Šafránek, který nás uvedl do metodiky Data Vault, vysvětlil na co je to dobré a na co si dát pozor. Pokud je datové modelování vaší doménou, tak si tohle užijete ještě o chlup víc.",
+      "releaseDate": "2025-04-07",
+      "durationMs": 5543536,
+      "image": "https://i.scdn.co/image/ab67656300005f1f756a88de0505bf004faa283d"
+    },
+    {
+      "id": "21L3SDT9gXAW6pAnMJwimS",
+      "name": "S11E05 - Radek Teichmann - BFSI v MoroSystems",
+      "description": "Dneska jsme si pozvali do studia CTO společnosti MoroSystems Radka Teichmanna, abychom probrali specifika BFSI domény a jak se k tomu postavili v MoroSystems. Samozřejmě nemohla chybět tradiční technická šťávička, microservices, cloudy a jiné dobrůtky. Dejte si další hoďku a půl nabušenou technickým pokecem se zajímavými lidmi #PodVocasem.",
+      "releaseDate": "2025-03-24",
+      "durationMs": 5480296,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2f515ada6a9c985a93eee63e"
+    },
+    {
+      "id": "7aKg04EPEEvVExPwhlUfP8",
+      "name": "S11E04 - Martin Hron - Od Battle AI v Mafii 2 k Security research v SentinelOne",
+      "description": "Po nějaké době jsme opět zabrousili do světa security a k tomu si pozvali hosta více než povolaného. Martin Hron je offensive security researcher v SentinelOne a to by to hrálo, abychom se nezeptali na druhy útoků, malware a spoustu dalšího. A protože je Martin renesanční člověk, pověděl nám i o své epizodě v 2K Czech, kde pracoval na legendární Mafii 2.",
+      "releaseDate": "2025-03-10",
+      "durationMs": 5605449,
+      "image": "https://i.scdn.co/image/ab67656300005f1f68b948eb15572f5cc46e5920"
+    },
+    {
+      "id": "2zU5b2ypDbIV4YiVQ9DWcy",
+      "name": "S11E03 - Dan Falta - 3D design ve hrách",
+      "description": "Další výlet do světa her a herního designu. Tentokrát jsme si pozvali Dana Faltu, který nám vysvětlil, jak vznikají 3D modely do her, jak funguje celá pipeline a proč je lepší Unreal engine než Unity. Pokud vám něco říkají hry jako Need for Speed, Brány Skeldalu, nebo třeba WRC, jste tu správně!",
+      "releaseDate": "2025-02-24",
+      "durationMs": 5575158,
+      "image": "https://i.scdn.co/image/ab67656300005f1f59a0f6ce93d546c24d66fc65"
+    },
+    {
+      "id": "44qjU1cCD5pNlM9HRVPBpp",
+      "name": "S11E02 - Filip Kinský - SmartGuide",
+      "description": "Šťávičková série pokračuje! Do studia přišel CTO služby SmartGuide Filip Kinský a kromě tradičního deepdive do střev služby jsme prosvištěli i téma udržitelného cestování, navigace v uzavřených prostorech a proč je lepší ve startupu použít React Native.",
+      "releaseDate": "2025-02-10",
+      "durationMs": 5188253,
+      "image": "https://i.scdn.co/image/ab67656300005f1f11d018a7d8b3a9f83f0a4304"
+    },
+    {
+      "id": "3qylnjkMBny6eL82YWZY44",
+      "name": "S11E01 - Jirka Mareš - SQL a Oracle",
+      "description": "Jedenáctá série vašeho nejoblíbenějšího českého IT podcastu startuje a jak je naším zvykem, startujeme z vostra! Do studia přišel SQL kouzelník a znalec všech zákoutí Oracle databází Jirka Mareš, se kterým jsme si dali deepdive do hlubin databázových dotazovacích jazyků. Pokud je JOIN váš denní chléb, bude vás to bavit dvojnásob!",
+      "releaseDate": "2025-01-27",
+      "durationMs": 5393935,
+      "image": "https://i.scdn.co/image/ab67656300005f1f8a65864ec9efe265cd6a30a0"
+    },
+    {
+      "id": "3oHPHy5Uw9mYF6JcIBubJv",
+      "name": "S10E06 - Šárka Kousalová - Employer branding a talent acquisition v IT",
+      "description": "Desátou sérii uzavíráme pokecem o tom, jak nejlépe propojit budování firemního a osobního brandu s hiringem. K tomu jsme si pozvali skvělou Šárku Kousalovou, která kvůli nám přiletěla až z Japonska. Dejte si finale grande série!",
+      "releaseDate": "2024-11-25",
+      "durationMs": 4714177,
+      "image": "https://i.scdn.co/image/ab67656300005f1f57135107175679a90a4a5a88"
+    },
+    {
+      "id": "2J60IG5740e8GosoL7POvS",
+      "name": "S10E05 - Honza Jiroušek - Energostack",
+      "description": "V předposledním díle desáté série k nám přišel na pokec skvělý Honza Jiroušek a vzal nás na do světa IoT a energa. Jak moderně měřit spotřebu energií, jak vypadá sensor pro měření kvality ovzduší a jak osázet senzory vysokoškolské koleje v zahraničí? Dozvíte se v hodině a půl zajímavého povídání.",
+      "releaseDate": "2024-11-11",
+      "durationMs": 5281555,
+      "image": "https://i.scdn.co/image/ab67656300005f1fb5d81f4e1dc07e2f7e76ca2b"
+    },
+    {
+      "id": "1ov7IBXROuEwuT8VfXEMR7",
+      "name": "S10E04 - Filip Pýrek - Serverless na AWS",
+      "description": "Svou návštěvou nás poctila jedna z hvězd českého AWS nebe a oficiální serverless hero Filip Pýrek. Řeč byla samozřejmě o cloudu, serverless, funkcích a vývoji obecně, ale zabrousili jsme i k jeho startupu. Šťávička included!",
+      "releaseDate": "2024-10-28",
+      "durationMs": 4143304,
+      "image": "https://i.scdn.co/image/ab67656300005f1f0a933483563eefb2fcecf3f8"
+    },
+    {
+      "id": "2fyNwmHbUavTBVbCbsHQGN",
+      "name": "S10E03 - Riki Fridrich - Vývoj JavaScriptu za posledních 20 let",
+      "description": "Chtěli jste ho - máte ho! Do studia dorazila legenda československého webového vývoje Riki Fridrich a společně jsme projeli vývoj JavaScriptu od batolete až po krizi středního věku, dotkli jsme se HTML a CSS a samozřejmě jsme nevynechali legendarní jQuery. Co dříve nebo později zabije React a proč by měli nováčci umět HTML bez knihoven? To vám v hodince a půl příjemného povídání řekne Riki!",
+      "releaseDate": "2024-10-14",
+      "durationMs": 5117854,
+      "image": "https://i.scdn.co/image/ab67656300005f1f22a1d18891d35e601aacef75"
+    },
+    {
+      "id": "7542sCU8UZvTIYMn20SWFM",
+      "name": "S10E02 - Tomáš Belák - Pohled do útrob Integray",
+      "description": "Pokračujeme ve \"startupovém šťávičkování\" a tentokrát jsme se s Tomášem Belákem podívali do útrob integrační služby Integray.com, která nabízí hodně zajímavých technologických výzev. Vychutnejte si ponor do integrací, Dockerů a tvorby custom SDKček v Pythonu a Node.js",
+      "releaseDate": "2024-09-30",
+      "durationMs": 4332839,
+      "image": "https://i.scdn.co/image/ab67656300005f1fb4da0da23e1a9ca3febfc33b"
+    },
+    {
+      "id": "7Bh1qIU5wRXE13asFC1G8s",
+      "name": "S10E01 - Honza Kuchař - Jak SW pomáhá při asistované reprodukci",
+      "description": "Čekali jste dlouho, ale nakonec jste se dočkali. Je tu první díl už desáté série a my opět vykopáváme ve velkým! Do studia dorazil Honza Kuchař, aby nám pověděl něco o specifikách asistované reprodukce a jak tomu z technického pohledu pomoct. Nechyběla ani oblíbená šťávička, takže jsme probrali PHP, Event Sourcing, PostreSQL i Domain Driven Design.",
+      "releaseDate": "2024-09-16",
+      "durationMs": 4853661,
+      "image": "https://i.scdn.co/image/ab67656300005f1f8659bfdfd5961b89816fe599"
+    },
+    {
+      "id": "3n9CohNaoYMRiMxp1L0Mzv",
+      "name": "S09E06 - Tomáš Krátký - Data Lineage v Manta a exit do IBM",
+      "description": "Devátou sérii zakončujeme příběhem o tom, jak Tomáš Krátký a jeho tým založili startup Manta, který po letech růstu nakonec vzalo pod svá křídla IBM a posunula data lineage na novou úroveň. Máte-li v oblibě grafové databáze a dobré startupové konce, díl číslo 54 je ten pravý pro vás.",
+      "releaseDate": "2024-07-01",
+      "durationMs": 5348322,
+      "image": "https://i.scdn.co/image/ab67656300005f1fa0459f4327296b102b09e111"
+    },
+    {
+      "id": "1JTa7J7jbUVILJJzl5Dws9",
+      "name": "S09E05 - Tomáš Sedláček - Dataddo",
+      "description": "V předposledním díle deváté série jsme s otevřenou náručí přivítali CTO společnosti Dataddo Tomáše Sedláčka, který s námi koukl na střívka této datové služby ze všech možných úhlů. Pokud vás zajímá vše kolem jazyka Go, tak tohle bude díl přímo pro vás!",
+      "releaseDate": "2024-06-17",
+      "durationMs": 4531655,
+      "image": "https://i.scdn.co/image/ab67656300005f1f62d66ed46ac1036de21ab2ad"
+    },
+    {
+      "id": "2FZRWA0fKCtrHZwHYSMs5T",
+      "name": "S09E04 - Milan Piskla - Vývoj ve světě IoT a Embedded",
+      "description": "Za půlkou deváté série jsme to opět stočili k ryze hardcore IT tématu a to IoT a Embedded. Měli jsme tu čest přivítat našeho skvělého kolegu, hlavní mozek i srdce Embedded and IoT v Ciklum Western Europe a náš velký vzor Milana Pisklu, který nás tímto světem provedl a zahrnul nás, se skromností jemu vlastní, tunou zajímavých informací. Milan je super, dejte si!",
+      "releaseDate": "2024-06-03",
+      "durationMs": 4535187,
+      "image": "https://i.scdn.co/image/ab67656300005f1f853d760416f7fb734c3e7104"
+    },
+    {
+      "id": "42rPgUqr213Vw45Lxc2K2k",
+      "name": "S09E03 - Libor Sionko - Z fotbalové reprezentace k Pythonu a Snowflake",
+      "description": "Ve třetím díle deváté série vám přinášíme další unikátní příběh kariérního přestupu do IT a jméno dnešního hosta bude fanouškům fotbalu určitě povědomé. Libor Sionko - fotbalový reprezentant, několikanásobný vítěz ligy i poháru, vítěz rakouské i dánské ligy... a nově též ajťák. Jaké byly jeho začátky, jak se prolíná svět techniky a fotbalu, proč odešel z manažerského postu fotbalové reprezentace a co ho v IT nejvíce láká, to se dozvíte v dalším nadupaném díle #PodVocasem.",
+      "releaseDate": "2024-05-20",
+      "durationMs": 4800010,
+      "image": "https://i.scdn.co/image/ab67656300005f1fb9a68472e171749727062d0e"
+    },
+    {
+      "id": "0nk5rbsEMnN4Jo8YQRsMRV",
+      "name": "S09E02 - Jakub Najberk - Implementace SAP v Automotive",
+      "description": "Ani v deváté sérii nepolevujeme v prozkoumávání všech koutů IT a tentokrát jsme se mrkli na zoubek SAPu a především jeho implementaci v Automotive industry. K tomu jsme si pozvali Románkova starého známého z Mladé Boleslavi Jakuba Najberka alias Najbika, který nám vysvětlil nejen samotnou historii SAPu, ale především to, jak taková implementace probíhá a kde se vlastně berou všichni ti SAP konzultanti.",
+      "releaseDate": "2024-05-06",
+      "durationMs": 4499799,
+      "image": "https://i.scdn.co/image/ab67656300005f1f7b4fb1af212213dcb76ac201"
+    },
+    {
+      "id": "4iqK5tKFXUICVnSEvz2N90",
+      "name": "S09E01 - Vojta Tůma - Keboola",
+      "description": "Keboola je už v českém startupovém prostředí pojem, ale je to stále ještě startup? A jak se změnila firemní kultura po prvním kole investic? A na čem vlastně celá Keboola běží? A proč jel Vojta na konec světa na motorce?! Samé otázky! Těch otázek bylo ještě víc a všechny nám je Vojta Tůma, toho času Field CTO Kebooly, zodpověděl. Dejte si parádní výkop deváté série.",
+      "releaseDate": "2024-04-22",
+      "durationMs": 6270753,
+      "image": "https://i.scdn.co/image/ab67656300005f1fd7eb5640ba389262f18bff48"
+    },
+    {
+      "id": "2FdUwyfvIq9KYPOsTy4Ekf",
+      "name": "S08E06 - Dušan Vystrčil - LLMs a GenAI v DataSentics",
+      "description": "Na závěr jsme si pozvali Dušana Vystrčila z DataSentics, který nám pověděl o své cestě z marketingu až k implementaci GenAI. Jak se taková implementace testuje, kolik toho chatbot udrží v kontextu a jak bude vypadat programátorská práce za 5 let? Dozvíte se na konci 8. série #PodVocasem!",
+      "releaseDate": "2024-03-11",
+      "durationMs": 4430397,
+      "image": "https://i.scdn.co/image/ab67656300005f1f7add85015e28bf975b84718e"
+    },
+    {
+      "id": "4njLWeliaKoVrLZJTloEf8",
+      "name": "S08E05 - Karel Matějka - Herní vývoj v Unity, pixelart a Bzzzt",
+      "description": "Ani v osmé sérii nemůže chybět herní vývojářské okénko a ani tentorkát nemíříme nízko. Do studia dorazila legenda českého herního vývoje Karel Matějka, jehož pixelartová plošinovka Bzzzt dobyla herní svět a my jsme se tomu samozřejmě podívali na zoubek.",
+      "releaseDate": "2024-02-26",
+      "durationMs": 5884958,
+      "image": "https://i.scdn.co/image/ab67656300005f1f9ab7ca4ed56532ee738a6f4b"
+    },
+    {
+      "id": "3LzS8kSqOLcDzYAvBc4dn7",
+      "name": "S08E04 - Honza Difko - Datový deepdive do České Spořitelny",
+      "description": "Po delší době jsme opět zabrousili do datového světa a bylo nám velkou ctí přivítat obrovského sympaťáka a neskutečně nabušený \"datový mozek\" Honzu Difka, který nám vysvětlil, jak Česká Spořitelna pracuje s daty, co plánují a jaké tooly jsou teď v kurzu. A neopomenul ani svoji životní vášeň pro cestování.",
+      "releaseDate": "2024-02-12",
+      "durationMs": 5623044,
+      "image": "https://i.scdn.co/image/ab67656300005f1fd5f7e18ec33988250733bbf0"
+    },
+    {
+      "id": "1GHDXACsxoyyebsjCiTFFA",
+      "name": "S08E03 - Ivo Musil - IT Security v roce 2024",
+      "description": "V třetím díle osmé série jsme si vzali konečně na paškál dlouho opomíjené téma bezpečnosti v IT. Do studia přijel CTO společnosti Corpus Solutions Ivo Musil, který nás do problematiky uvedl a nakonec jsme se dostali až k tomu, co by si IT mohlo vzít ze světa rugby. Další nabušená devadesátiminutovka je tu!",
+      "releaseDate": "2024-01-29",
+      "durationMs": 5611081,
+      "image": "https://i.scdn.co/image/ab67656300005f1f05aef7923ed75cd7d3b265e1"
+    },
+    {
+      "id": "5kjn3MFZtIwAZ8EVn8Zyol",
+      "name": "S08E02 - Martin Děcký - Microkernel OS",
+      "description": "Opět je tu deepdive, jak ho máte rádi a dneska to budou pro změnu mikrojádrové operační systémy. Do studia jsme nalákali Martina Děckého z firmy Kernkonzept, aby nám vysvětlil nejen úplné základy microkernel OS, ale taky řekl něco o svém letitém působení na Matfyzu, v Huawei a nebo třeba o tom, proč už 20 let spravuje open source operační systém HelenOS.",
+      "releaseDate": "2024-01-15",
+      "durationMs": 5790982,
+      "image": "https://i.scdn.co/image/ab67656300005f1f4ec7a32fa26b0afe2335c15d"
+    },
+    {
+      "id": "69L16LMtfJP2GyOht2KjbF",
+      "name": "S08E01 - Ondřej Šika - DevOps",
+      "description": "Ani v roce 2024 nebudete bez vašeho oblíbeného podcastu #PodVocasem, protože za námi do studia dorazil znalec DevOps, Kubernetes a jiných divočin Ondra Šika a jak je dobrý zvykem našeho podcastu, vzali jsme to komplet od podlahy. Je libo Kubernetes, Helm charts, IaaC, DevSecOps, nebo jakýkoliv jiný Ops? No tak si dejte první díl nové série!",
+      "releaseDate": "2024-01-01",
+      "durationMs": 5545028,
+      "image": "https://i.scdn.co/image/ab67656300005f1f138958011f922b941464b8b0"
+    },
+    {
+      "id": "2DBxRJWwUl14pVBIztHhTW",
+      "name": "S07 - Bloopers aneb co se nepovedlo",
+      "description": "Bonusová vánoční epizoda je tady! Během těch 42 dílů se nám toho spoustu nepovedlo a náš kamarád (a autor skvělého zvukového obalu) Lukáš Jan Marek nelenil a udělal sestřih toho naprosto nejhoršího. Pozor! Pokud si to hodláte pustit k vykrajování perníčků, tak radši zažeňte děti pryč, protože je to velmi explicitní.\nJo a mrkněte na Lukášův Soundcloud, je tam kopa super muziky!\nhttps://soundcloud.com/lukisjama\nTak šťastné a veselé a v roce 2024 u dalších sérií naslyšenou!",
+      "releaseDate": "2023-12-21",
+      "durationMs": 432065,
+      "image": "https://i.scdn.co/image/ab67656300005f1fd9cf81f073d4e7aaeb20e870"
+    },
+    {
+      "id": "4zKMltowkuGfm5zYKAriQz",
+      "name": "S07E06 - Tomáš Grošup - Cesta z fintechu do compiler týmu v Microsoftu",
+      "description": "Sedmou sérii a celkem 42. díl s námi #PodVocasem uzavřel člen F# compiler týmu z Microsoftu Tomáš Grošup, který nás provedl jeho zajímavou životní cestou. Co ho nebavilo ve fintechu, jak moc je Excel funkcionální a kolik unit testů mají v Microsoftu pro F# compiler? Dozvíte se během nabušených 80 minut!",
+      "releaseDate": "2023-11-13",
+      "durationMs": 4897270,
+      "image": "https://i.scdn.co/image/ab67656300005f1f094c9a4b52b30ce266b0e792"
+    },
+    {
+      "id": "5Nu71tnsjJlr5IMVtOIlVi",
+      "name": "S07E05 - Michal Sänger - BTC, Typescript a GraphQL v Trezor.io",
+      "description": "Trvalo nám pouhopouhých 40 dílů, než jsme do agendy zařadili pokec o Bitcoinu a kryptoměnách obecně. A když už k nám Michal Sänger přišel, tak jsme kromě Trezor.io probrali i Typescript, GraphQL a jiné frontendové dobroty. Dejte si předposlední díl série!",
+      "releaseDate": "2023-10-30",
+      "durationMs": 4651029,
+      "image": "https://i.scdn.co/image/ab67656300005f1f529e27fd6fb3043063aca4ac"
+    },
+    {
+      "id": "3pmc4dPHjbwOuYUQyZrLOM",
+      "name": "S07E04 - Michal Těhník - 8 let v Productboardu",
+      "description": "Ve studiu #PodVocasem jsme měli tu čest přivítat 6. zaměstnance Productboardu a nadšence do Staff Engineeringu Michala \"MicTecha\" Těhníka, se kterým jsme probrali jeho posledních 8 let v Productboardu. A nepokecali jsme jenom o tradičních tématech jako monolith vs microservices, architektura a změny ve firemních strukturách, ale dotkli jsme se i bolestivého tématu layoffs a jak je udělat správně.",
+      "releaseDate": "2023-10-16",
+      "durationMs": 5229111,
+      "image": "https://i.scdn.co/image/ab67656300005f1fa5affdac08541299e46f09e3"
+    },
+    {
+      "id": "1OcQYEctVXh4UwXU9jwk8X",
+      "name": "S07E03 - Tomáš Blaho - O Mafii, Warhorse Studios, programování grafiky v AAA titulech a pekle herních enginů",
+      "description": "Znáte Mafii 1 a 2? A Forzu Horizon? A Kingdom Come? A Ori and the Blind Forest? Co kdybychom vám řekli, že k nám do studia dorazil někdo, kdo má prsty v programování herní grafiky pro tyhle AAA tituly? A kromě vzpomínání na dřevní doby vývoje vlastního LS3D enginu pro Mafii jsme se mrkli do střev nejznámějších herních titulů současnosti, včetně legendárního CRYENGINE.",
+      "releaseDate": "2023-10-02",
+      "durationMs": 6993889,
+      "image": "https://i.scdn.co/image/ab67656300005f1fafd7e8b2df0c4c82b1a77b6c"
+    },
+    {
+      "id": "0HfvYAaR7bRWHH8Wjyf5Pk",
+      "name": "S07E02 - Marcel Šerý - Cesta low-code startupu Jetveo",
+      "description": "Až z dalekého Brna k nám dorazil CTO společnosti Jetveo Marcel Šerý a společně jsme probrali cestu jeho low-code startupu. Jaké chyby v týmu udělali, proč není dobrý nápad vytvářet abstrakci nad ASP.NET serverem a kterého programátorského hříchu lituje nejvíc? Dozvíte se v druhém díle sedmé série vašeho oblíbeného IT podcastu #PodVocasem.",
+      "releaseDate": "2023-09-18",
+      "durationMs": 4188530,
+      "image": "https://i.scdn.co/image/ab67656300005f1f69dfc00406b264cc9a8b4fed"
+    },
+    {
+      "id": "4zT72Y2Q9TzdTHtegV1j7f",
+      "name": "S07E01 - Antonín Kučera - Data v Livesport",
+      "description": "Což takhle dát si sedmou sérii? Nu což, staniž se! A rozjedeme to hned ve velkým! Do studia totiž dorazil Head of BI ze společnosti Livesport Tonda Kučera a prozradil nám, s kolika daty pracují, jak ovlivňují výsledky utkání chování uživatelů a jak do toho celého zapadá mánie kolem generative AI.",
+      "releaseDate": "2023-09-04",
+      "durationMs": 6110986,
+      "image": "https://i.scdn.co/image/ab67656300005f1f3d889910c4a72c44f2bfb57b"
+    },
+    {
+      "id": "54dFouxZdumwuRiT2oTI7l",
+      "name": "S06E06 - Jan Novotný - Java, jOpenSpace a EvitaDB",
+      "description": "V závěrečném dílu šesté série nás #PodVocasem navštívil Honza Novotný z FG Forrest a vzali jsme to tradičně zleva zprava. Kromě očekávaných témat jako Javička jsme narazili i na Honzovu ne-konferenci jOpenSpace, Kafemlejnek.TV a nebo jeho poslední počin s magickým jménem EvitaDB. Pokud se zabýváte e-commerce, bude vás tenhle díl bavit dvojnásob!",
+      "releaseDate": "2023-06-26",
+      "durationMs": 5425166,
+      "image": "https://i.scdn.co/image/ab67656300005f1f960f7c7b415bb7ede1366005"
+    },
+    {
+      "id": "625fWOXYc23jp3XKDxjDOi",
+      "name": "S06E05 - Michal Hošna - Livestreaming v CDN77",
+      "description": "O tom, co vlastně znamená přenést videobsah z jednoho koutu světa na druhý, kdy je latence opravdu problém a jak vyšplhat ze supportu do core týmu nám přišel povyprávět Head of Livestream Engineering ze společnosti CDN77 Michal Hošna. Máte-li rádi streaming, Rust, Cčko a punkový firmy, dnešní díl vám bude chutnat.",
+      "releaseDate": "2023-06-12",
+      "durationMs": 4446635,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2537a1cc334cd597b51878d7"
+    },
+    {
+      "id": "3cMrwvtEDM4XEtXa2AzsTv",
+      "name": "S06E04 - Tomáš Metz - Engineering v České Spořitelně",
+      "description": "Pro někoho jsou banky symbolem zastaralosti a zkostňatění. To ovšem zdaleka neplatí pro Českou Spořitelnu, jejíž Head of Engineering Tomáš Metz nám popsal, jak se tvoří banka budoucnosti. Chcete-li vědět, jestli ve \"Spořce\" vede React nebo Angular, zda-li zůstávají u Javy a jak Tomovi pomohly zkoušenosti z McKinsey & Company, už teď bušte do tlačítka play!",
+      "releaseDate": "2023-05-29",
+      "durationMs": 4925920,
+      "image": "https://i.scdn.co/image/ab67656300005f1fe36d511c6b647c349afd0589"
+    },
+    {
+      "id": "5zmuQLAcwtglT8sPr9yyHf",
+      "name": "S06E03 - Tomáš Muchka - Developer Experience v GoodData",
+      "description": "Roman opět sáhl do svého bezedného měšce zajímavých ex-kolegů a vytáhl Principal UX Designera ve společnosti GoodData Tomáše Muchku, který nám povyprávěl o UX, DX, product discovery a jak to celé pasuje do sebe.",
+      "releaseDate": "2023-05-15",
+      "durationMs": 4619592,
+      "image": "https://i.scdn.co/image/ab67656300005f1fc3cf5889f275350a6878bb83"
+    },
+    {
+      "id": "5lyHiANgu4YtpTzjju83ry",
+      "name": "S06E02 - Filip Dvořák - Inteligentní automatizace s Filuta.ai",
+      "description": "\"Softwarové inženýrství je hravá forma jak vyjádřit komplexní myšlenky.\" Nejen toto prohlásil náš dnešní host Filip Dvořák ze společnosti Filuta.ai. Máte-li chuť na hoďku a čtvrt nabitou AI, symbolickými a jazykovými modely, automatizací a kdovíčím ještě, dejte si další díl podcastu #PodVocasem.",
+      "releaseDate": "2023-05-01",
+      "durationMs": 4282684,
+      "image": "https://i.scdn.co/image/ab67656300005f1f5ff573e3b50653c96a1815fa"
+    },
+    {
+      "id": "2AewaQ0sC1qFtrWtOa4FBU",
+      "name": "S06E01 - Michal Augustýn - Programátorský pokec o Avastu (a špetka hejtu na Scalu)",
+      "description": "Šestou sérii vykopáváme ryze programátorským pokecem s Michalem \"Augi\" Augustýnem, se kterým jsme probrali jeho dlouhou cestu Avastem, kariérní postup, microservices, conventional commits, monorepo... no prostě ten náš oblíbený mišmaš.",
+      "releaseDate": "2023-04-17",
+      "durationMs": 4541840,
+      "image": "https://i.scdn.co/image/ab67656300005f1fde45c9844407fa4eb2cef001"
+    },
+    {
+      "id": "7g07kgNX6SE61014fklugJ",
+      "name": "S05E06 - Michal Halenka - Vaříme datový bujón v DataSentics",
+      "description": "I v posledním díle páté série jsme si dali něco z Poliho ranku a pozvali si Michala Halenku - datového architekta firmy DataSentics. Michal se s námi podělil nejen o zkušenosti ze správy linuxových serverů na kolejích, ale vysvětlil i rozdíly mezi tím, jak vyvíjejí řešení tradiční programátoři a datoví vědci.",
+      "releaseDate": "2023-03-27",
+      "durationMs": 4959828,
+      "image": "https://i.scdn.co/image/ab67656300005f1f402460087a9c61ed15b6b891"
+    },
+    {
+      "id": "4cGgZdTJqJeAtGrXxCpJDe",
+      "name": "S05E05 - Petr Polák - Z výpočetního střediska Chemopetrolu do top managementu CGI",
+      "description": "Tentokrát jsme si dovolili jednu velmi osobní finesku a pozvali si do studia dnes již bývalého viceprezidenta kanadské IT společnosti CGI Petra Poláka, který nám pověděl o své životní cestě a co si z ní odnesl. Pokud vám to jméno přijde povědomé, pak máte pravdu - je to skutečně Poliho otec. A že jablko nepadlo daleko od stromu, se můžete přesvědčit už teď.",
+      "releaseDate": "2023-03-13",
+      "durationMs": 4966957,
+      "image": "https://i.scdn.co/image/ab67656300005f1fc255e3d909c1af1ffa26e77b"
+    },
+    {
+      "id": "5GDn50l7Xl5sy7t2O4yt7u",
+      "name": "S05E04 - Tomáš Mikolov - Word2Vec, neuronové sítě a pravda o práci v Silicon Valley",
+      "description": "Dnes nás navštívil jeden z nejcitovanějších vědců v oboru umělé inteligence, držitel ceny Neuron za excelenci ve vědě a autor přelomového algoritmu Word2Vec Tomáš Mikolov. Probrali jsme nejen jeho začátky s programováním vlastní verze Warcraftu, ale hlavně jeho neuvěřitelnou kariéru v Microsoft Research, Google a Facebooku.",
+      "releaseDate": "2023-02-27",
+      "durationMs": 6898012,
+      "image": "https://i.scdn.co/image/ab67656300005f1fb510c02bd28d3d34b87daae3"
+    },
+    {
+      "id": "4AAO3QTdumRAdBt4BSCzf7",
+      "name": "S05E03 - Radim Čebiš - Engineering ve Vendavu",
+      "description": "Po delší době se opět vracíme do temných vod pricing softwaru a nevzali jsme si na pokec nikoho menšího než Engineering Directora firmy Vendavo Radima Čebiše, se kterým jsme to probrali tradičně zleva zprava. Jak se časem vyvíjí tech stack původně Java-based firmy a jak do toho zapadají akvizice ostatních firem? Vše se dozvíte v příjemné \"hoďce a čtvrt\" strávené #PodVocasem.",
+      "releaseDate": "2023-02-13",
+      "durationMs": 4561009,
+      "image": "https://i.scdn.co/image/ab67656300005f1fcaed60e8344d570a87d422f8"
+    },
+    {
+      "id": "1crgcrl9dB2Z7pD1NxhCIR",
+      "name": "S05E02 - Tomáš Petříček - Microsoft Research, Alan Turing Institute, design programovacích jazyků a F#",
+      "description": "V druhém díle 5. série nás navštívila legenda funkcionálního .NETu Tomáš Petříček a kromě tradičních témat, jako je F#, jsme probrali i jeho cestu do Cambridge, Microsoft Research, Alan Turing Institute a nebo třeba to, zda-li by mimozemšťani pochopili Lambda Calculus.",
+      "releaseDate": "2023-01-30",
+      "durationMs": 5073287,
+      "image": "https://i.scdn.co/image/ab67656300005f1fc3ec379eafa3a150dd4d713d"
+    },
+    {
+      "id": "1FYg8mGBFRBNjawLQIFKoL",
+      "name": "S05E01 - Martin Procházka - Performance .NET aplikací",
+      "description": "Vykopáváme už 5. řadu podcastu #PodVocasem a tentokrát jsme si vzali na paškál platformu .NET a její výkon. Jakých chyb se vyvarovat, jak rychlost kódu měřit a může za všechno Entity Framework? Více se dozvíte pod tlačítkem \"Play\"",
+      "releaseDate": "2023-01-16",
+      "durationMs": 4519710,
+      "image": "https://i.scdn.co/image/ab67656300005f1fc280d9cb525e67ec73af98ec"
+    },
+    {
+      "id": "6B2vafPmT8cCD2n9VZn9Tb",
+      "name": "S04E06 - Aleš Lednej - Black Bison Tech a Salesforce",
+      "description": "Čtvrtou sérii nám pomohl uzavřít CTO startupu Black Bison Tech Aleš Lednej, který s námi projel nejen datové dobroty, ale i specifika vývoje software na platformě Salesforce.",
+      "releaseDate": "2022-12-05",
+      "durationMs": 4665578,
+      "image": "https://i.scdn.co/image/ab67656300005f1f8ca84069cc34f47623af141d"
+    },
+    {
+      "id": "0Wnnqyj9IKtL59zWmBtvzj",
+      "name": "S04E05 - Jirka Pénzeš - Startup Studio",
+      "description": "Přišel, viděl, pokecal a navíc stanovil nový rekord v délce jednoho dílu podcastu na téměř devadesáti minutách. Jirka Pénzeš - technická hlava stojící za Startup Studiem s neskutečným přehledem. O čem je Startup Studio, co jsou PWAčka a jestli se vyplatí investovat do Flutteru?",
+      "releaseDate": "2022-11-21",
+      "durationMs": 5345062,
+      "image": "https://i.scdn.co/image/ab67656300005f1f972c5104e773659aca4cd4ab"
+    },
+    {
+      "id": "1N9GOeGw4EeOfrrvr5gKZb",
+      "name": "S04E04 - Ondřej Pelech - Scala",
+      "description": "Scalu jsme měli v hledáčku už dlouho, ale až Ondra Pelech se nad námi slitoval a přišel nám tento prostor zaplnit zajímavým povídáním. Téměř hodina a půl deep dive do útrob Scaly je tu pro vás!",
+      "releaseDate": "2022-11-07",
+      "durationMs": 5033389,
+      "image": "https://i.scdn.co/image/ab67656300005f1f0ae3b4cb9be7dc2de9309e56"
+    },
+    {
+      "id": "1D8uX0eaSMtHpe1ISyrNGw",
+      "name": "S04E03 - Lukáš Rychtecký - Koncept svobodné firmy v Applifting",
+      "description": "Svobodná firma - každý o tom mluví, ale málokdo to ve skutečnosti dělá. Jak to v takové svobodné firmě vypadá a je to jenom o otevřených platech, nebo je za tím ve skutečnosti víc? Nejen o tom jsme si povídali s Lukášem Rychteckým ze společnosti Applifting.",
+      "releaseDate": "2022-10-24",
+      "durationMs": 4678623,
+      "image": "https://i.scdn.co/image/ab67656300005f1f4e8093f4306cfa3a849bff86"
+    },
+    {
+      "id": "0BNZeLpsPreedjUlXbpDlX",
+      "name": "S04E02 - David Pícha - Od boje s organizovaným zločinem k programování",
+      "description": "Dneska jsme ve studiu #PodVocasem přivítali bývalého detektiva Národní centrály proti organizovanému zločinu (NCOZ), který se po 20 letech boje se zločinem rozhodl změnit kariéru a dal se na programování. Jak ho napadlo změnit obor a jaké jsou první krůčky? Dozvíte se v dalším dílu vaše oblíbeného podcastu.",
+      "releaseDate": "2022-10-10",
+      "durationMs": 4296555,
+      "image": "https://i.scdn.co/image/ab67656300005f1f487aa2015c6a38352882641c"
+    },
+    {
+      "id": "0YbeWQ1Gb6k723sz4H1Irt",
+      "name": "S04E01 - Dominik Moštěk - Funkcionální programování v Javě a role \"hostujícího profesora\" v Ataccama",
+      "description": "Už jsme chtěli odejít do zaslouženého podcastího důchodu, ale nakonec jsme se nechali překecat na ještě jednu sérii. A když teda novej díl, tak pořádně! Do studia jsme zlákali \"hostujícího profesora\" Dominika Moštěka ze společnosti Ataccama, se kterým jsme hodili řeč o funkcionálním a objektovém programování, jak ho aplikovat v Javě, jak poznat code smell a o spoustě dalších zajímavých věcí. Dejte si!",
+      "releaseDate": "2022-09-26",
+      "durationMs": 4026616,
+      "image": "https://i.scdn.co/image/ab67656300005f1f547dcd5c96f29b291218b59c"
+    },
+    {
+      "id": "1TFOZDGLqFlraxBe4IGdGj",
+      "name": "S03E06 - Cyril Sahula - Artificial Intelligence v recruitmentu, Azure Cloud a Kotlin v Jobno.one",
+      "description": "Poslední díl třetí série uzavírá náš bývalý kolega a toho času CTO startupu Jobno.one Cyril Sahula, který k nám přijel popovídat o Azure Cloudu, aplikaci Artificial Intelligence v recrutimentu a nemohlo chybět ani malé shrnutí technologií a jazyků na JVM. Tento díl je tak dlouhý, že si ho můžete pouštět přes léto po částech, aby se vám nestýskalo.",
+      "releaseDate": "2022-06-20",
+      "durationMs": 5035401,
+      "image": "https://i.scdn.co/image/ab67656300005f1fecfd800b22a12be19c36f257"
+    },
+    {
+      "id": "5miJakvkQ6qlAcfzI20wBs",
+      "name": "S03E05 - Jakub Kašpar - UX, Dark Patterns a Design Sprint",
+      "description": "Po ryze technických tématech jsme zabrousili do trošičku méně technických vod a společně s Kubou Kašparem jsme mrkli na zoubek UX, designu, design sprintu a spoustě dalších zajímavých věcí. Pokud máte v browseru neustále otevřenou Figmu a kečup vybíráte podle lahve, bude pro vás dnešní díl #PodVocasem rajskou hudbou.",
+      "releaseDate": "2022-06-06",
+      "durationMs": 4613012,
+      "image": "https://i.scdn.co/image/ab67656300005f1f90c0a59001c3e74ca9b0fc42"
+    },
+    {
+      "id": "1OQjtC1KgwRXGWTPub9t8g",
+      "name": "S03E04 - Jakub Veverka - Docker, Kubernetes a OpenShift",
+      "description": "Čtvrtý díl podcastu #PodVocasem potěší především milovníky kontejnerů, Dockeru, Kubernetes a OpenShiftu. Navštívil nás starý známý Kuba Veverka z RedHatu a probrali jsme to pěkně od (dockerizované) podlahy. Pokud jste netušili, proč jsou kontejnery cool, tak teď už to určitě víte.\nDisclaimer: Byť nosí Kuba firemní logo na tričku s patřičnou hrdostí, jeho názory byly ryze osobní.",
+      "releaseDate": "2022-05-23",
+      "durationMs": 4467377,
+      "image": "https://i.scdn.co/image/ab67656300005f1f6d78ed3c46946d8a3f816d12"
+    },
+    {
+      "id": "30et8UEcl8r9ygbpxc5Ut1",
+      "name": "S03E03 - Vojtěch Mádr - Xamarin a personalizovaná videa v Motionlab",
+      "description": "Známá postava .NET komunity, milovník mobilního vývoje a znalec Xamarinu Vojta Mádr nás přišel navštívit a společně jsme si #PodVocasem povídali o jeho cestě z humanitní rodiny až do pozice CTO startupu Motionlab. Krom jiného jsme naťukli i věčný problém nedostatku žen v IT a nakonec jsme zabrousili i do nového Vojtova podcastu.",
+      "releaseDate": "2022-05-09",
+      "durationMs": 3785050,
+      "image": "https://i.scdn.co/image/ab67656300005f1fe450347edccb569af8fc6680"
+    },
+    {
+      "id": "2nHqzbsi7M2myLAUcStaBD",
+      "name": "S03E02 - Radim Špetlík - Computer Vision a visionPigeon",
+      "description": "Po delší době jsme se opět vrátili do divokých vod umělé inteligence a strojového učení a společně s CTO startupu visionPigeon Radimem Špetlíkem jsme probrali computer vision a jeho nepřeberné možnosti. Věděli jste, že se dá z barvy obličeje rozpoznat tep nebo relativní hladina cukru v krvi? A jak to souvisí s tím, co nabízí visionPigeon? Dozvíte se #PodVocasem.",
+      "releaseDate": "2022-04-25",
+      "durationMs": 4690044,
+      "image": "https://i.scdn.co/image/ab67656300005f1f38619b5498b835a80b2394f1"
+    },
+    {
+      "id": "6aY2rvKl3sYVIfqfK5S1gQ",
+      "name": "S03E01 - Milan Borůvka - Tech stack v PriceFx",
+      "description": "Podcast #PodVocasem startuje třetí sérii a tentokrát se Džoukr a Poli podívali na zoubek technickému zázemí firmy PriceFx. Jak funguje engineering v budoucím unicornu, proč přepsat komponenty z Ember do Reactu a zbavíme se konečně Excelu? Nejen o tom se nám rozpovídal SVP of Engineering Milan Borůvka.",
+      "releaseDate": "2022-04-12",
+      "durationMs": 4222838,
+      "image": "https://i.scdn.co/image/ab67656300005f1fec773f68a970e820c5c36246"
+    },
+    {
+      "id": "2wF7eTc3nsEeww0Wnm58eX",
+      "name": "S02E06 - Honza Vrubel - Data Engineering v DHL",
+      "description": "V závěrečném dílu druhé série nás navštívil datový mág Honza Vrubel, aby nám představil, jak se v DHL zachází s daty a jaká cesta vede od hrubých dat až po voňavé reporty v prezentacích managementu. Pokud vám něco říká ETL, Oracle Data Integrator, Teradata, Tabular nebo třeba PowerBI, bude tohle díl přímo pro vás.",
+      "releaseDate": "2022-03-28",
+      "durationMs": 3618785,
+      "image": "https://i.scdn.co/image/ab67656300005f1f8bf5bd6ab5087b4c4e6ba478"
+    },
+    {
+      "id": "1qBNACavMXSflvUv27IhX0",
+      "name": "S02E05 - Aleš Roubíček - Clojure",
+      "description": "Enfant terrible českého Twitteru, milovník Clojure, funkcionálního programování, přímočarosti a čistoty kódu. Pro Aleše Roubíčka alias Rarouše bychom našli možná stovky dalších důvodů, proč si ho pozvat do studia #PodVocasem, ale dneska jsme naťukli především jazyk Clojure. Jak je u Aleše dobrý zvykem, došlo na řadu silných názorů, výborných myšlenek a pár explicitních výrazů. Dejte si - za tu hoďku to stojí!",
+      "releaseDate": "2022-03-14",
+      "durationMs": 3615389,
+      "image": "https://i.scdn.co/image/ab67656300005f1f417449dfe59318acfad50204"
+    },
+    {
+      "id": "4XsTAkt6iI0AjyJrprgZ7q",
+      "name": "S02E04 - Luboš Hradecký - Web Accessibility",
+      "description": "Po delší době jsme opět sáhli do vnitropodnikového šuplíku hostů a vytáhli našeho milého kolegu a znalce webové přístupnosti Luboše Hradeckého. Jak udělat váš web, aby byl přístupný i pro návštěvníky se zdravotním omezením a který web to dělá vyloženě blbě? Nejen to se dozvíte v dalším díle podcastu #PodVocasem.",
+      "releaseDate": "2022-02-28",
+      "durationMs": 3499271,
+      "image": "https://i.scdn.co/image/ab67656300005f1f71a74f5eedfe647bc59a8bc0"
+    },
+    {
+      "id": "3F48ssf0hp8xeTDcQikWCq",
+      "name": "S02E03 - Zdeněk Merta - Event Sourcing, CQRS a Domain Driven Design",
+      "description": "Už delší dobu jsme měli v TODO listu téma Event Sourcingu, CQRS a DDD a konečně se nám podařilo si pozvat odborníka s praktickými zkušenostmi ze stavění bankovních systémů. Co je Event Sourcing, proč ho dělat a kdy ho naopak nedělat? Co je task-based UI a není nakonec lepší starej dobrej CRUD? Dozvíte se v neskutečně nabušených 70 minutách dalšího dílu podcastu #PodVocasem.\nOdkazy:\nhttps://www.eventstore.com\nhttp://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf\nhttps://en.wikipedia.org/wiki/Enterprise_Integration_Patterns",
+      "releaseDate": "2022-02-14",
+      "durationMs": 4200287,
+      "image": "https://i.scdn.co/image/ab67656300005f1f0784f10bda65291e8620c8a8"
+    },
+    {
+      "id": "3KnoUbTLmcPp4fbd6LTMPi",
+      "name": "S02E02 - Borek Bernard - Monorepo, Multirepo, VersionPress a Shoptet",
+      "description": "Po eskapádách na elektrokole k nám do studia konečně dorazil i znalec frontendových technologií a git mág Borek Bernard, abychom to probrali tak nějak z gruntu a omrkli jeho práci na VersionPressu, Shoptetu, ale i další zajímavá témata jako třeba nekonečnou bitvu mezi monorepem a multirepem.",
+      "releaseDate": "2022-01-31",
+      "durationMs": 3644788,
+      "image": "https://i.scdn.co/image/ab67656300005f1f63bb6f079c8e2eb861999603"
+    },
+    {
+      "id": "6MrC5yDRoleofSBfLP1pmd",
+      "name": "S02E01 - Aleš Krutina - Jablotron, senzory a hardware obecně",
+      "description": "Druhou sérii jsme se rozhodli vykopnout pěkně z vostra a tak jsme si pozvali bývalého CTIO z Jablotronu a člověka s neskutečným rozhledem nejen ve světě hardware Aleše Krutinu. Jak probíhají inovace v Jablotronu, co vlastně aktivuje senzor na tříštění skla a kdy se svět čipů otevře širší komunitě programátorů? To tlačítko, které hledáte, je PŘEHRÁT...",
+      "releaseDate": "2022-01-17",
+      "durationMs": 4205295,
+      "image": "https://i.scdn.co/image/ab67656300005f1ff92c3348efca4b0ba76e91d4"
+    },
+    {
+      "id": "04UtuIzyr6SW6zU0zekPbV",
+      "name": "S01E06 - Lukáš Svoboda - CSS v roce 2022",
+      "description": "S novým rokem uzavíráme první sérii #PodVocasem a uzavíráme ji stylově. Doslova! Do studia dorazil odborník na CSS a lektor Czechitas Lukáš Svoboda a společně jsme probrali stav webu a jeho stylování na začátku roku 2022.",
+      "releaseDate": "2022-01-03",
+      "durationMs": 3056217,
+      "image": "https://i.scdn.co/image/ab67656300005f1f281f3273112395a445e3f8e0"
+    },
+    {
+      "id": "4aWTMPiX1YUHUO27rL4UOH",
+      "name": "S01E05 - Jaroslav Holaň a David Ryšánek - Confer-O-Matic",
+      "description": "V adventní náladě jsme se #PodVocasem sešli s klukama ze startupu Confer-O-Matic. Jak se daří virtuálním konferencím v čase pandemie a jak se dá vůbec na něčem dohodnout, když máte ne dva, ale sedm zakladatelů firmy? Nejen to nám řekli Jarda Holaň a David Ryšánek.",
+      "releaseDate": "2021-12-20",
+      "durationMs": 3318171,
+      "image": "https://i.scdn.co/image/ab67656300005f1f15b0722819034179f909ef12"
+    },
+    {
+      "id": "5YLXUokd7BzJzFNut6GGyX",
+      "name": "S01E04 - Lucie Nová - Na hraně mezi Dev a QA",
+      "description": "S energií sobě vlastní k nám do studia #PodVocasem vtrhla vichřice vtipu a šarmu jménem Lucie Nová, aby s námi pokecala o hlídání kvality v softwarovém vývoji, kariéře v IT a nakonečném souboji developmentu a QA. Zatím nejdelší díl první série, ale rozhodně stojí za to!",
+      "releaseDate": "2021-12-06",
+      "durationMs": 4140196,
+      "image": "https://i.scdn.co/image/ab67656300005f1f802694fc17bc857b3f87bb89"
+    },
+    {
+      "id": "5y0cN40af1KKBehBJ2MeYb",
+      "name": "S01E03 - Richard Vlas - Machine Learning a Artificial Intelligence",
+      "description": "Co je to neuronka? Jakej je rozdíl mezi Machine Learning, Deep Learning a proč se to furt plete? A mělo by autonomní vozidlo přejet dítě nebo radši bábu? Nejen to vám v třetím díle IT podcastu #PodVocasem prozradí náš milý kolega Richard Vlas.",
+      "releaseDate": "2021-11-22",
+      "durationMs": 3203047,
+      "image": "https://i.scdn.co/image/ab67656300005f1fbb3c6130ddb3e815e5546d15"
+    },
+    {
+      "id": "3wzEJyOUNvF7xAwHd4aEcI",
+      "name": "S01E02 - Tomáš Látal - Elm",
+      "description": "Proč je Elm úplně nejvíc nejlepší způsob jak psát webové single page aplikace? Proč se nespoléhat na nezdokumentovaná API jazyka? A bude někdy v Prostějově v coworkingu avokádové latté v akci? Dozvíte se v druhém díle IT podcastu #PodVocasem, kam jsme si tentokrát pozvali Tomáše Látala.",
+      "releaseDate": "2021-11-08",
+      "durationMs": 3676105,
+      "image": "https://i.scdn.co/image/ab67656300005f1f166ffa6b67846487af74f2f1"
+    },
+    {
+      "id": "4kg7EEBlqsFtUlYAOb1WzD",
+      "name": "S01E01 - Tomáš Horáček - SwiftUI a mobilní vývoj",
+      "description": "První díl nového IT podcastu #PodVocasem je tu! Jako hosta jsme si pozvali vývojáře, nadšence do funkcionálního programování a také amatérského herce Tomáše Horáčka, aby nám vnesl světlo do temných zákoutí mobilního vývoje. Co je SwiftUI a čím se liší od UIKit? Je programování v Xcode radost nebo bolest? A co ostatní alternativy typu React Native? No už se nezdržujte čtením popisu dílu a utíkejte si to pustit!",
+      "releaseDate": "2021-10-25",
+      "durationMs": 3562639,
+      "image": "https://i.scdn.co/image/ab67656300005f1f39357bdcf0793d7c571f3aed"
+    },
+    {
+      "id": "0oAjNq2q3bmOJ7IGHTUlHT",
+      "name": "S01 - Upoutávka",
+      "description": "Nový IT podcast PodVocasem již 25. října 2021 na všech streamovacích platformách!",
+      "releaseDate": "2021-10-13",
+      "durationMs": 85184,
+      "image": "https://i.scdn.co/image/ab67656300005f1fa996dc9272a6ed783ce383fe"
+    }
+  ]
+}

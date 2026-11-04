@@ -1,0 +1,23 @@
+{
+  "tagline": "IT podcast, který rozhodně neplave po povrchu.",
+  "subtitle": "Zajímaví hosté v hodinovém pořadu vysílaném",
+  "hashtag": "#PodVocasem",
+  "about": "Roman \"Džoukr\" Provazník a Petr \"Poli\" Polák v novém IT podcastu, který rozhodně neplave po povrchu. Zajímaví hosté a neotřelá témata do hloubky v hodinovém pořadu vysílaném přímo #PodVocasem!",
+  "hosts": [
+    { "name": "Roman \"Džoukr\" Provazník", "email": "dzoukr@dzoukr.cz" },
+    { "name": "Petr \"Poli\" Polák", "email": "petr@polakzceska.cz" }
+  ],
+  "platforms": {
+    "spotify": "https://open.spotify.com/show/280aceAx85AKZslVytXsrB",
+    "apple": "https://podcasts.apple.com/us/podcast/podvocasem/id1590431276",
+    "youtube": "https://www.youtube.com/@podvocasem",
+    "herohero": "https://herohero.co/podvocasem",
+    "bluesky": "https://bsky.app/profile/podvocasem.cz"
+  },
+  "company": {
+    "name": "PodVocasem s.r.o.",
+    "address": "Vrchlického 3318, Kročehlavy, 272 01 Kladno",
+    "ico": "29670039",
+    "registry": "Zapsáno v obchodním rejstříku vedeném Městským soudem v Praze, oddíl C, vložka 449427."
+  }
+}

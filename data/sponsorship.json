@@ -1,0 +1,15 @@
+{
+  "season": 16,
+  "partners": [
+    {
+      "name": "Česká spořitelna",
+      "url": "https://www.csas.cz/",
+      "logo": "/img/partners/sporice.svg"
+    },
+    {
+      "name": "Second Foundation",
+      "url": "https://www.second-foundation.eu/",
+      "logo": "/img/partners/second_foundation.png"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* Tokens mirror the variables in podvocasem.cz.pen */
+@theme {
+  --color-ink: #000000;
+  --color-heading: #374151;
+  --color-card: #374151;
+  --color-card-2: #4b5563;
+  --color-card-bar: #2f3845;
+  --color-on-card: #f9fafb;
+  --color-on-card-muted: #d1d5db;
+  --color-link: #1e40af;
+  --color-brand-red: #e3343f;
+  --color-bonus: #f59e0b;
+  --color-herohero: #7c3aed;
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-900: #111827;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-link;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-[1440px] px-4 sm:px-8 lg:px-20;
+}
