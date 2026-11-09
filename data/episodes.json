@@ -1,6 +1,14 @@
 {
   "episodes": [
     {
+      "id": "74UmcerEgNnEK4mWQ5sFET",
+      "name": "S16E06 - Jan Hloušek - Od Rytířů Grálu ke Space Engineers",
+      "description": "Poslední díl 16. série uzavírá téma, které vždycky rádi v #PodVocasem otevřeme, a to gaming. Do studia zavítal skvělý Honza Hloušek alias Čenda, který nás provedl vývojem her od ranných 90. let až po jeho nejnovější počin Space Engineers 2. Kolik dal Vochozka za první hru, jak se vyhazovalo v Disney a jak se řeší výpočty v nekonečném vesmíru? Dejte si další díl a dozvíte se!",
+      "releaseDate": "2026-11-09",
+      "durationMs": 3172650,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
       "id": "1kWojOCOBvV1TnJ8x7QUfN",
       "name": "Changelog #3",
       "description": "Nový formát a nový způsob, jak vám přinášet zajímavé události ze světa IT. Džoukr s Polim se tentokrát sešli na dálku a probrali, co z novinek je zaujalo. Dejte si!\nAI agenti už staví většinu nových Spark Declarative Pipelines na Databricks - https://www.databricks.com/blog/built-agents-case-spark-declarative-pipelines\nBigQuery spojuje tabulková data s PDF, obrázky, audiem a videem do jednoho analytického světa - https://cloud.google.com/blog/products/data-analytics/analyze-unstructured-data-in-bigquery-with-objectref\nAI FinOps: Databricks popisuje, jak jim náklady na coding agenty začaly exponenciálně růst a jak je pomocí routingu, budgetů a levnějších modelů srazili až o 90 % - https://www.databricks.com/blog/ai-bill-coming\nKritická chyba v PHP: https://www.wiz.io/blog/php2shell-php-rce\nIncident v LiteLLM: https://docs.litellm.ai/blog/security-incident-oct-21-2026\nFalešné statistiky v LLMs: https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web\nMoatless: https://moatless.store/blog/announcing-moatless",
@@ -171,7 +179,7 @@
     {
       "id": "00CVLcR5OgASZiPa7OaEvj",
       "name": "S14E03 - Denisa Faltová - Jak aplikovat AI ve firmách",
-      "description": "Pozvání do studia přijala naše kamarádka a odbornice na aplikaci a využití AI ve firmách Denisa Faltová, se kterou jsme to vzali klasicky od podlahy a kromě tradičních AI-based témat jsme zabrousili i do etiky, školství a jiných odvětví. Pokud přemýšlíte, jak vlastně celý trend uchopit a aplikovat ve vaší firmě, bude tento díl další pošušňání pro vás!",
+      "description": "Pozvání do studia přijala naše kamarádka a odbornice na aplikaci a využití AI ve firmách Denisa Faltová, se kterou jsme to vzali klasicky od podlahy a kromě tradičních AI-based témat jsme zabrousili i do etiky, školství a jiných odvětví. Pokud přemýšlíte, jak vlastně celý trend uchopit a aplikovat ve vaší firmě, bude tento díl další pošušňání pro vás!\nWeb a kontakt na Denisu: https://aikoucka.com",
       "releaseDate": "2026-02-16",
       "durationMs": 4401253,
       "image": "https://i.scdn.co/image/ab67656300005f1ff16c15f812ae831dc868fe52"
