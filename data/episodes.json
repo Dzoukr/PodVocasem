@@ -1,6 +1,14 @@
 {
   "episodes": [
     {
+      "id": "3GpcgsaulM7kPqMLa0V32J",
+      "name": "Changelog #4",
+      "description": "Nový formát a nový způsob, jak vám přinášet zajímavé události ze světa IT. Džoukr s Polim se tentokrát sešli na dálku a probrali, co z novinek je zaujalo. Dejte si!\nBrány Skeldalu 4 na Startovači - https://www.startovac.cz/projekty/brany-skeldalu-4\nAI dekompiluje hry - https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/\nAI klony mohou urychlit GTA VI na PC - https://arstechnica.com/gaming/2026/11/could-potential-ai-clones-of-gta-vi-force-a-quicker-official-port/\nPropuštění vývojáři klonují SaaS - https://occupysaas.com\nKolik stojí framework, když kód píše AI - https://javascriptweekly.com/issues/809\nAI slíbila méně práce, nikdy jsem nepracoval víc - https://oioannou.com/blog/ai-promised-less-work/\nNechte si za pohovor zaplatit - https://galratner.substack.com/p/stop-giving-your-time-away-to-companies\nČím nahradit LeetCode pohovory - https://newsletter.eng-leadership.com/p/is-leetcode-dead-whats-the-alternative\nBinance vykradeno za 6,3 mld. USD přes fake job interview a kompromitované developery - https://www.reuters.com/world/binance-says-hackers-used-fake-job-interview-compromise-computer-before-63-2026-11-03/\nAnthropic si zajišťuje 1,7 GW energie pro AI datacentra v dealu za 3,4 mld. USD - https://www.reuters.com/business/energy/anthropic-secures-34-billion-generator-deal-ai-data-centers-ft-reports-2026-11-08/\nAI analyzuje MRI srdce za sekundy a mírně lépe predikuje přežití pacientů - https://www.ucl.ac.uk/news/2026/nov/ai-heart-scan-measurements-better-predict-survival",
+      "releaseDate": "2026-11-12",
+      "durationMs": 2177344,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
       "id": "74UmcerEgNnEK4mWQ5sFET",
       "name": "S16E06 - Jan Hloušek - Od Rytířů Grálu ke Space Engineers",
       "description": "Poslední díl 16. série uzavírá téma, které vždycky rádi v #PodVocasem otevřeme, a to gaming. Do studia zavítal skvělý Honza Hloušek alias Čenda, který nás provedl vývojem her od ranných 90. let až po jeho nejnovější počin Space Engineers 2. Kolik dal Vochozka za první hru, jak se vyhazovalo v Disney a jak se řeší výpočty v nekonečném vesmíru? Dejte si další díl a dozvíte se!",
