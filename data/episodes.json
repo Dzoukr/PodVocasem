@@ -1,6 +1,14 @@
 {
   "episodes": [
     {
+      "id": "3YwiLPHzwpD27HBqvlizNC",
+      "name": "BonusOFFka #4 - Z programátora do managementu (a zpět)",
+      "description": "Je tu další skvělá bonusOFFka pro naše předplatitele a tentokrát jsme se rozhodli probrat tradiční kariérní cestu od vývojáře k manažerovi. Jak to bylo u nás, na co si dát pozor a které chyby rozhodně nezopakovat, to se dozvíte v nabušeném speciálu. Kdo už teď hlídá hordy AI agentů, měl by zpozornit a dát si to aspoň dvakrát!",
+      "releaseDate": "2026-11-23",
+      "durationMs": 160106,
+      "image": "https://i.scdn.co/image/ab67656300005f1f2d16f837a4d69c63ce95c122"
+    },
+    {
       "id": "3GpcgsaulM7kPqMLa0V32J",
       "name": "Changelog #4",
       "description": "Nový formát a nový způsob, jak vám přinášet zajímavé události ze světa IT. Džoukr s Polim se tentokrát sešli na dálku a probrali, co z novinek je zaujalo. Dejte si!\nBrány Skeldalu 4 na Startovači - https://www.startovac.cz/projekty/brany-skeldalu-4\nAI dekompiluje hry - https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/\nAI klony mohou urychlit GTA VI na PC - https://arstechnica.com/gaming/2026/11/could-potential-ai-clones-of-gta-vi-force-a-quicker-official-port/\nPropuštění vývojáři klonují SaaS - https://occupysaas.com\nKolik stojí framework, když kód píše AI - https://javascriptweekly.com/issues/809\nAI slíbila méně práce, nikdy jsem nepracoval víc - https://oioannou.com/blog/ai-promised-less-work/\nNechte si za pohovor zaplatit - https://galratner.substack.com/p/stop-giving-your-time-away-to-companies\nČím nahradit LeetCode pohovory - https://newsletter.eng-leadership.com/p/is-leetcode-dead-whats-the-alternative\nBinance vykradeno za 6,3 mld. USD přes fake job interview a kompromitované developery - https://www.reuters.com/world/binance-says-hackers-used-fake-job-interview-compromise-computer-before-63-2026-11-03/\nAnthropic si zajišťuje 1,7 GW energie pro AI datacentra v dealu za 3,4 mld. USD - https://www.reuters.com/business/energy/anthropic-secures-34-billion-generator-deal-ai-data-centers-ft-reports-2026-11-08/\nAI analyzuje MRI srdce za sekundy a mírně lépe predikuje přežití pacientů - https://www.ucl.ac.uk/news/2026/nov/ai-heart-scan-measurements-better-predict-survival",
